@@ -1,0 +1,160 @@
+.backToTheMainPage
+{
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+}
+
+
+.EDVbackIMG
+{
+	height: 200px;
+	background-image: url(../mainPage/birdBack.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
+.EDV
+{
+	margin-left: 83%;
+	font-size: 150%;
+	text-shadow:  1px 1px 2px black, 0 0 1em  #1D8FE1;
+	color: rgb(97, 33, 218);
+	
+}
+
+
+#app 
+{
+	border-top:.5em solid var(--brandColor);
+	max-width:800px;
+	margin: 0 auto;
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:96%;
+	transform:translate(-50%, -50%);
+	padding: 2em 3em 1em;
+	background:white;
+	overflow: hidden;
+	animation: enterFromBottom .7s .3s ease-out both;
+	
+
+}
+
+
+	
+button 
+{
+	all:unset;
+	display: inline-block;
+	padding:1em;
+	letter-spacing: .05em;
+	font-size: 14px;
+	cursor: pointer;
+	border:1px solid;
+	color:white;
+	border:none;
+	background:var(--brandColor);
+	transition:250ms; 
+	margin: 0 .2em 0 0;
+	opacity: .4;
+
+		
+}
+
+
+
+form h2, header h2 
+{
+	text-align: center;
+	color:var(--brandColor);
+}
+
+.register-form, .signin-form 
+{
+	margin: 2em 0;
+	padding:1em;
+}
+
+.form-group 
+{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	padding:8px;
+}
+
+label 
+{
+    flex:1;
+    text-align: right;
+    margin-right: 2em;
+}
+
+input {
+    font-size: inherit;
+    border:none;
+    background:whitesmoke;
+    font-family:inherit;
+    padding:.4em;
+    flex:1.5;
+}
+
+input.invalid {
+    border:1px solid tomato;
+}
+
+
+.registerButton {
+	--brandColor:rgba(46, 92, 153, 0.527);
+    --brandColorDark:hsl(0, 92%, 35%);
+    color: black;
+    border-radius: 10%;
+}
+
+    
+p 
+{
+    line-height: 1.4;
+	max-width:50ch;
+	margin: 10px auto;
+	text-align:center;
+}
+
+
+
+	
+    input[type=submit] 
+    {
+		display: block;
+		margin: 2em 0 2em auto;
+		padding: .6em 1em;
+		font-size: inherit;
+		cursor: pointer;
+		background:var(--brandColor);
+		color:black;
+        border:none;
+        font-weight: 700;
+	}
+	
+    input[type=submit]:disabled 
+    {
+		opacity: .4;
+		cursor: not-allowed;
+	}
+	
+    input[type=submit]:hover 
+    {
+		background: var(--brandColorDark);
+    }
+    
