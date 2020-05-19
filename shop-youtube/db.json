@@ -1,0 +1,392 @@
+{
+  "products": [
+    {
+      "image": "1.jpg",
+      "name": "Sweeet",
+      "price": 210.1143662,
+      "article": "T1",
+      "category": "Men Clothes",
+      "sizesStock": ["XS", "S", "M", "L", "XL", "XXL"],
+      "sizesNumber": ["3","2", "6", "0", "0", "4"]
+    },
+    {
+      "image": "2.jpeg",
+      "name": "BEAR...here or there",
+      "price": 315.3364324,
+      "article": "T2",
+      "category": "Women Clothes",
+      "sizesStock": ["XS", "S", "M", "L", "XL", "XXL"],
+      "sizesNumber": ["0","0", "6", "0", "0", "0"]
+    },
+    {
+      "image": "3.jpg",
+      "name": "Mamas cuty beast",
+      "price": 120.22435433,
+      "article": "T3",
+      "category": "Men Clothes",
+      "sizesStock": ["XS", "S", "M", "L", "XL", "XXL"],
+      "sizesNumber": ["3","6", "6", "0", "1", "4"]
+    },
+    {
+      "image": "4.jpg",
+      "name": "Apha dog",
+      "price": 53.44345327,
+      "article": "T4",
+      "category": "Women Clothes",
+      "sizesStock": ["XS", "S", "M", "L", "XL", "XXL"],
+      "sizesNumber": ["3","2", "10", "0", "0", "11"]
+    },
+    {
+      "image": "5.jpg",
+      "name": "Happy milkman",
+      "price": 65.89533643745,
+      "article": "T5",
+      "category": "Women Clothes",
+      "sizesStock": ["XS", "S", "M", "L", "XL", "XXL"],
+      "sizesNumber": ["3","2", "24", "0", "1", "0"]
+    },
+    {
+      "image": "6.jpg",
+      "name": "MR White",
+      "price": 187.5625236,
+      "article": "T6",
+      "category": "Women Clothes",
+      "sizesStock": ["XS", "S", "M", "L", "XL", "XXL"],
+      "sizesNumber": ["3","0", "6", "3", "5", "4"]
+    },
+    {
+      "image": "7.jpg",
+      "name": "Lolas best friends",
+      "price": 221.7825235,
+      "article": "T7",
+      "category": "Women Clothes",
+      "sizesStock": ["XS", "S", "M", "L", "XL", "XXL"],
+      "sizesNumber": ["0","2", "1", "0", "0", "3"]
+    },
+    {
+      "image": "8.jpg",
+      "name": "Chinese peace of...",
+      "price": 99.90456542,
+      "article": "T8",
+      "category": "Men Clothes",
+      "sizesStock": ["XS", "S", "M", "L", "XL", "XXL"],
+      "sizesNumber": ["3","2", "0", "0", "13", "4"]
+    },
+    {
+      "image": "9.jpg",
+      "name": "FrontBackDeveloper",
+      "price": 165.8745678,
+      "article": "T9",
+      "category": "Women Clothes",
+      "sizesStock": ["XS", "S", "M", "L", "XL", "XXL"],
+      "sizesNumber": ["3","0", "6", "0", "43", "4"]
+    },
+    {
+      "image": "10.jpg",
+      "name": "Granny`s pills",
+      "price": 199.4325654,
+      "article": "T10",
+      "category": "Men Clothes",
+      "sizesStock": ["XS", "S", "M", "L", "XL", "XXL"],
+      "sizesNumber": ["3","2", "11", "0", "1", "4"]
+    },
+    {
+      "image": "11.jpg",
+      "name": "Xiphone13",
+      "price": 1599.6675473,
+      "article": "T11",
+      "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
+      "sizesNumber": ["11","44", "0", "12", "11", "0"],
+      "category": "Big Screen phones"
+
+    },
+    {
+      "image": "12.jpg",
+      "name": "Xiphone-u",
+      "price": 599.882354326,
+      "article": "T12",
+      "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
+      "sizesNumber": ["3","2", "6", "0", "0", "4"],
+      "category": "Little Screen phones"
+      
+
+    },
+    {
+      "image": "13.jpg",
+      "name": "HellYep",
+      "price": 1099.785235,
+      "article": "T13",
+      "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
+      "sizesNumber": ["3","2", "6", "0", "0", "4"],
+      "category": "Little Screen phones"
+
+    },
+    {
+      "image": "14.jpg",
+      "name": "ZuZaHer",
+      "price": 499.5525353,
+      "article": "T14",
+      "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
+      "sizesNumber": ["3","2", "6", "0", "0", "4"],
+      "category": "Big Screen phones"
+
+    },
+    {
+      "image": "15.jpg",
+      "name": "PooPhonE",
+      "price": 599.22235236,
+      "article": "T15",
+      "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
+      "sizesNumber": ["3","2", "6", "0", "0", "4"],
+      "category": "Big Scree phones"
+
+    },
+    {
+      "image": "16.jpg",
+      "name": "KillBill",
+      "price": 1599.5625235,
+      "article": "T16",
+      "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
+      "sizesNumber": ["3","2", "6", "0", "0", "4"],
+      "category": "Big Screen phones"
+
+    },
+    {
+      "image": "17.jpg",
+      "name": "CallBall",
+      "price": 325.77235236,
+      "article": "T17",
+      "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
+      "sizesNumber": ["3","2", "6", "0", "0", "4"],
+      "category": "Little Screen phones"
+
+    },
+    {
+      "image": "18.jpg",
+      "name": "ArkaSha",
+      "price": 768.77235236,
+      "article": "T18",
+      "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
+      "sizesNumber": ["3","2", "6", "0", "0", "4"],
+      "category": "Big Screen phones"
+
+    },
+    {
+      "image": "19.jpg",
+      "name": "Sheva",
+      "price": 677.67235235,
+      "article": "T19",
+      "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
+      "sizesNumber": ["3","2", "6", "0", "0", "4"],
+      "category": "Big Screen phones"
+
+    },
+    {
+      "image": "20.jpg",
+      "name": "COOORUUU",
+      "price": 333.56523564,
+      "article": "T20",
+      "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
+      "sizesNumber": ["3","2", "6", "0", "0", "4"],
+      "category": "Little Screen phones"
+
+    }
+  ],
+
+  "clothes": [
+    {
+      "image": "1.jpg",
+      "name": "Sweeet",
+      "price": 210.1143662,
+      "article": "T1",
+      "category": "Men Clothes",
+      "sizesStock": ["XS", "S", "M", "L", "XL", "XXL"],
+      "sizesNumber": ["3","2", "6", "0", "0", "4"]
+    },
+    {
+      "image": "2.jpeg",
+      "name": "BEAR...here or there",
+      "price": 315.3364324,
+      "article": "T2",
+      "category": "Women Clothes",
+      "sizesStock": ["XS", "S", "M", "L", "XL", "XXL"],
+      "sizesNumber": ["0","0", "6", "0", "0", "0"]
+    },
+    {
+      "image": "3.jpg",
+      "name": "Mamas cuty beast",
+      "price": 120.22435433,
+      "article": "T3",
+      "category": "Men Clothes",
+      "sizesStock": ["XS", "S", "M", "L", "XL", "XXL"],
+      "sizesNumber": ["3","6", "6", "0", "1", "4"]
+    },
+    {
+      "image": "4.jpg",
+      "name": "Apha dog",
+      "price": 53.44345327,
+      "article": "T4",
+      "category": "Women Clothes",
+      "sizesStock": ["XS", "S", "M", "L", "XL", "XXL"],
+      "sizesNumber": ["3","2", "10", "0", "0", "11"]
+    },
+    {
+      "image": "5.jpg",
+      "name": "Happy milkman",
+      "price": 65.89533643745,
+      "article": "T5",
+      "category": "Women Clothes",
+      "sizesStock": ["XS", "S", "M", "L", "XL", "XXL"],
+      "sizesNumber": ["3","2", "24", "0", "1", "0"]
+    },
+    {
+      "image": "6.jpg",
+      "name": "MR White",
+      "price": 187.5625236,
+      "article": "T6",
+      "category": "Women Clothes",
+      "sizesStock": ["XS", "S", "M", "L", "XL", "XXL"],
+      "sizesNumber": ["3","0", "6", "3", "5", "4"]
+    },
+    {
+      "image": "7.jpg",
+      "name": "Lolas best friends",
+      "price": 221.7825235,
+      "article": "T7",
+      "category": "Women Clothes",
+      "sizesStock": ["XS", "S", "M", "L", "XL", "XXL"],
+      "sizesNumber": ["0","2", "1", "0", "0", "3"]
+    },
+    {
+      "image": "8.jpg",
+      "name": "Chinese peace of...",
+      "price": 99.90456542,
+      "article": "T8",
+      "category": "Men Clothes",
+      "sizesStock": ["XS", "S", "M", "L", "XL", "XXL"],
+      "sizesNumber": ["3","2", "0", "0", "13", "4"]
+    },
+    {
+      "image": "9.jpg",
+      "name": "FrontBackDeveloper",
+      "price": 165.8745678,
+      "article": "T9",
+      "category": "Women Clothes",
+      "sizesStock": ["XS", "S", "M", "L", "XL", "XXL"],
+      "sizesNumber": ["3","0", "6", "0", "43", "4"]
+    },
+    {
+      "image": "10.jpg",
+      "name": "Granny`s pills",
+      "price": 199.4325654,
+      "article": "T10",
+      "category": "Men Clothes",
+      "sizesStock": ["XS", "S", "M", "L", "XL", "XXL"],
+      "sizesNumber": ["3","2", "11", "0", "1", "4"]
+    }
+  ],
+
+  "mobile": [
+    {
+      "image": "11.jpg",
+      "name": "Xiphone13",
+      "price": 1599.6675473,
+      "article": "T11",
+      "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
+      "sizesNumber": ["11","44", "0", "12", "11", "0"],
+      "category": "Big Screen phones"
+
+    },
+    {
+      "image": "12.jpg",
+      "name": "Xiphone-u",
+      "price": 599.882354326,
+      "article": "T12",
+      "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
+      "sizesNumber": ["3","2", "6", "0", "0", "4"],
+      "category": "Little Screen phones"
+      
+
+    },
+    {
+      "image": "13.jpg",
+      "name": "HellYep",
+      "price": 1099.785235,
+      "article": "T13",
+      "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
+      "sizesNumber": ["3","2", "6", "0", "0", "4"],
+      "category": "Little Screen phones"
+
+    },
+    {
+      "image": "14.jpg",
+      "name": "ZuZaHer",
+      "price": 499.5525353,
+      "article": "T14",
+      "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
+      "sizesNumber": ["3","2", "6", "0", "0", "4"],
+      "category": "Big Screen phones"
+
+    },
+    {
+      "image": "15.jpg",
+      "name": "PooPhonE",
+      "price": 599.22235236,
+      "article": "T15",
+      "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
+      "sizesNumber": ["3","2", "6", "0", "0", "4"],
+      "category": "Big Scree phones"
+
+    },
+    {
+      "image": "16.jpg",
+      "name": "KillBill",
+      "price": 1599.5625235,
+      "article": "T16",
+      "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
+      "sizesNumber": ["3","2", "6", "0", "0", "4"],
+      "category": "Big Screen phones"
+
+    },
+    {
+      "image": "17.jpg",
+      "name": "CallBall",
+      "price": 325.77235236,
+      "article": "T17",
+      "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
+      "sizesNumber": ["3","2", "6", "0", "0", "4"],
+      "category": "Little Screen phones"
+
+    },
+    {
+      "image": "18.jpg",
+      "name": "ArkaSha",
+      "price": 768.77235236,
+      "article": "T18",
+      "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
+      "sizesNumber": ["3","2", "6", "0", "0", "4"],
+      "category": "Big Screen phones"
+
+    },
+    {
+      "image": "19.jpg",
+      "name": "Sheva",
+      "price": 677.67235235,
+      "article": "T19",
+      "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
+      "sizesNumber": ["3","2", "6", "0", "0", "4"],
+      "category": "Big Screen phones"
+
+    },
+    {
+      "image": "20.jpg",
+      "name": "COOORUUU",
+      "price": 333.56523564,
+      "article": "T20",
+      "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
+      "sizesNumber": ["3","2", "6", "0", "0", "4"],
+      "category": "Little Screen phones"
+
+    }
+  ]
+}
