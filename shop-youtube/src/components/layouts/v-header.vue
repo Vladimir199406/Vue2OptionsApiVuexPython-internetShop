@@ -19,15 +19,15 @@
                           <h2>Categories:</h2>
                       </div>
                       <ul class="aside-menu">
-                          <li><router-link to="/">ALL PRODUCTS</router-link></li>
-                          <li><router-link to="/c-clothes-catalog">CLOTHES</router-link></li>
-                          <li><router-link to="/m-mobile-catalog">MOBILES AND JUDGETS</router-link></li>
-                          <li><a href="">FOOD</a></li>
-                          <li><a href="">BOOKS</a></li>
-                          <li><a href="">TV`s</a></li>
-                          <li><a href="">AUDIO</a></li>
-                          <li><a href="">CONSOLES</a></li>
-                          <li><a href="">GARDEN TOOLS</a></li>                    
+                          <li v-on:click.prevent="activeLink = 1" v-bind:class="{active: activeLink === 1}"><router-link to="/">ALL PRODUCTS</router-link></li>
+                          <li v-on:click.prevent="activeLink = 2" v-bind:class="{active: activeLink === 2}"><router-link to="/c-clothes-catalog">CLOTHES</router-link></li>
+                          <li v-on:click.prevent="activeLink = 3" v-bind:class="{active: activeLink === 3}"><router-link to="/m-mobile-catalog">MOBILES AND JUDGETS</router-link></li>
+                          <li v-on:click.prevent="activeLink = 4" v-bind:class="{active: activeLink === 4}"><a href="">FOOD</a></li>
+                          <li v-on:click.prevent="activeLink = 5" v-bind:class="{active: activeLink === 5}"><a href="">BOOKS</a></li>
+                          <li v-on:click.prevent="activeLink = 6" v-bind:class="{active: activeLink === 6}"><a href="">TV`s</a></li>
+                          <li v-on:click.prevent="activeLink = 7" v-bind:class="{active: activeLink === 7}"><a href="">AUDIO</a></li>
+                          <li v-on:click.prevent="activeLink = 8" v-bind:class="{active: activeLink === 8}"><a href="">CONSOLES</a></li>
+                          <li v-on:click.prevent="activeLink = 9" v-bind:class="{active: activeLink === 9}"><a href="">GARDEN TOOLS</a></li>                    
                       </ul>
                   </nav>
                 </aside>
@@ -41,6 +41,7 @@ import {mapActions, mapGetters} from 'vuex'
     props: {},
     data() {
       return {
+        activeLink: 1,
         searchValue: ''
       }
     },
@@ -65,6 +66,8 @@ import {mapActions, mapGetters} from 'vuex'
 </script>
 
 <style lang="scss">
+
+
   .EDVimage{
     width: 120px;
     height: 70px;
@@ -155,7 +158,7 @@ import {mapActions, mapGetters} from 'vuex'
         
     }
 
-     /*HEADER OF THE PAGE*/
+     
     #heading {
         background-size: cover;
         margin: 30px 0;
@@ -171,7 +174,7 @@ import {mapActions, mapGetters} from 'vuex'
         
     }
 
-    /*SIDE MENU*/
+    
     aside {
         float: left;
         width: 190px;
@@ -199,11 +202,11 @@ import {mapActions, mapGetters} from 'vuex'
         padding: 10px;
         margin: 0;
     }
-        li.active a{
-        color: #29c5e6;
-        list-style-type: none;
-        .list-inline li a:focus, .list-inline li a:hover {
-         background-color: #f5f5f5;
-}
+    .active {
+      border-radius: 10px;
+      color: red;
+      font-size: 3vh;
+      background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+      background-color: #020202;
     }
 </style>

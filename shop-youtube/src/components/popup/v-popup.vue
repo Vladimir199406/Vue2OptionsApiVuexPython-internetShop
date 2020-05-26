@@ -3,14 +3,6 @@
     <div class='v-popup'>
       <div class="v-popup__header">
         <span>{{popupTitle}}</span>
-        <span>
-        <i
-            class="material-icons"
-            @click="closePopup"
-        >
-          close
-        </i>
-      </span>
       </div>
       <div class="v-popup__content">
         <slot></slot>
@@ -83,6 +75,7 @@
     bottom: 0;
   }
   .v-popup {
+    text-align: left;
     padding: 16px;
     position: fixed;
     top: 50px;

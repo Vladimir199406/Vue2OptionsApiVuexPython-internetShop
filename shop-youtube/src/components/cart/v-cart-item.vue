@@ -6,6 +6,7 @@
       <p>{{cart_item_data.price | toFix}}</p>
       <p>{{cart_item_data.article}}</p>
       <p>{{cart_item_data.selectedSize}}</p>
+      <p>{{cart_item_data.idSize}}</p>
     </div>
     <div class="v-cart-item__quantity">
       <p>Qty:</p>

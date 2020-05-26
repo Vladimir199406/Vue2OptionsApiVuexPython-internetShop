@@ -9,7 +9,6 @@
         :popupTitle="product_data.name"
         @closePopup="closeInfoPopup"
         @rightBtnAction="addToCart"
-        
     >
       <img class="v-catalog-item__image" :src=" require('../../assets/images/' + product_data.image) " alt="img">
       <div>
@@ -31,8 +30,14 @@
           </select>          
         </div>
       </div>
-      <span>{{selectedSizeChange()}}</span>
+      <span>{{selectedSizeChange()}} {{selectedSizeChangeAddToProductData()}}</span>
     </v-popup>
+    <!--BELOW IS POPUP WHEN OPTION IS NOT SELECTED-->
+     <v-alert-popup
+      v-if="isAlertPopupVisible"
+      @closeAlert="closeAlertPopupInfo"
+     >
+     </v-alert-popup>
     <img class="v-catalog-item__image" :src=" require('../../assets/images/' + product_data.image) " alt="img" >
     <p class="v-catalog-item__name">{{product_data.name}}</p>
     <p class="v-catalog-item__price">Price: {{product_data.price | toFix}}</p>
@@ -53,11 +58,13 @@
 
 <script>
   import vPopup from '../popup/v-popup'
+  import vAlertPopup from '../popup/v-alert-popup'
   import toFix from '../../filters/toFix'
   export default {
     name: "v-catalog-item",
     components: {
-      vPopup
+      vPopup,
+      vAlertPopup
     },
 
     props: {
@@ -72,6 +79,7 @@
     data() {
       return {
         isInfoPopupVisible: false,
+        isAlertPopupVisible: false,
         selectedSize: 'NOPE',
         sizes: [
           {value: this.product_data.sizesStock[0]},
@@ -88,6 +96,10 @@
     },
     computed: {},
     methods: {
+      selectedSizeChangeAddToProductData: function(){
+        this.product_data.selectedSize = this.selectedSize;
+        this.product_data.idSize = this.product_data.article + this.product_data.selectedSize;
+      },
       selectedSizeChange: function(){
         console.log(this.selectedSize);
       },
@@ -97,18 +109,25 @@
       closeInfoPopup() {
         this.isInfoPopupVisible = false;
       },
+      showAlertPopupInfo(){
+        this.isAlertPopupVisible = true;
+      },
+      closeAlertPopupInfo(){
+        this.isAlertPopupVisible = false;
+      },
       addToCart() {
-        if(this.selectedSize != 'NOPE')
+        if(this.selectedSize != 'NOPE'){
         this.$emit('addToCart', this.product_data);
+        //console.log(this.product_data.idSize)
+        }
         else{
-          alert("YOU DIN NOT SELECT THE SIZE");
+          this.showAlertPopupInfo()
         }
       }
     },
     mounted() {
       this.$set(this.product_data, 'quantity', 1)
-    },
-    watch: {}
+    }
   }
 </script>
 

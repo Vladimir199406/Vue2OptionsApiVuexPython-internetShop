@@ -13,22 +13,26 @@ export default {
   SET_PRODUCTS_TO_STATE: (state, products) => {
     state.products = products;
   },
+
   SET_CART: (state, product) => {
-    let isProductExists = false;
-    if (state.cart.length) {
-      state.cart.map(function (item) {
-        if (item.article === product.article) {
-          isProductExists = true;
-          item.quantity++
-        }
-      })
-      if (!isProductExists) {
-        state.cart.push(product)
+    let item = state.cart.find(i => {
+      if(i.idSize == product.idSize){
+        i.quantity++;
+        return i;
       }
-    } else {
-      state.cart.push(product)
+    });
+    if(!item){
+     state.cart.push({
+      image: product.image,
+      name: product.name,
+      price: product.price,
+      article: product.article,
+      selectedSize: product.selectedSize,
+      idSize: product.idSize
+     })
     }
   },
+
   REMOVE_FROM_CART: (state, index) => {
     state.cart.splice(index, 1)
   },
