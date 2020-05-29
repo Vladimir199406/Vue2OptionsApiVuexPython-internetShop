@@ -18,6 +18,7 @@ let store = new Vuex.Store({
     isMobile: false,
     isDesktop: true,
     products: [],
+    productsClothes: [],
     cart: []
   },
   mutations,

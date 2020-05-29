@@ -10,7 +10,7 @@
         @closePopup="closeInfoPopup"
         @rightBtnAction="addToCart"
     >
-      <img class="v-catalog-item__image" :src=" require('../../assets/images/' + product_data.image) " alt="img">
+      <img class="v-catalog-item__image" :src=" require('../../../assets/images/' + product_data.image) " alt="img">
       <div>
         <p class="v-catalog-item__name">Article: {{product_data.article}}</p>
         <p class="v-catalog-item__price">Price: {{product_data.price | toFix}} Р.</p>
@@ -38,7 +38,7 @@
       @closeAlert="closeAlertPopupInfo"
      >
      </v-alert-popup>
-    <img class="v-catalog-item__image" :src=" require('../../assets/images/' + product_data.image) " alt="img" >
+    <img class="v-catalog-item__image" :src=" require('../../../assets/images/' + product_data.image) " alt="img" >
     <p class="v-catalog-item__name">{{product_data.name}}</p>
     <p class="v-catalog-item__price">Price: {{product_data.price | toFix}}</p>
     <button
@@ -57,11 +57,11 @@
 </template>
 
 <script>
-  import vPopup from '../popup/v-popup'
-  import vAlertPopup from '../popup/v-alert-popup'
-  import toFix from '../../filters/toFix'
+  import vPopup from '../../popup/v-popup'
+  import vAlertPopup from '../../popup/v-alert-popup'
+  import toFix from '../../../filters/toFix'
   export default {
-    name: "v-catalog-item",
+    name: "c-clothes-item",
     components: {
       vPopup,
       vAlertPopup

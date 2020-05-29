@@ -2,7 +2,7 @@
   "products": [
     {
       "image": "1.jpg",
-      "name": "Sweeet",
+      "name": " T-SHIRT 'Sweeet' ",
       "price": 210.1143662,
       "article": "T1",
       "category": "Men Clothes",
@@ -11,7 +11,7 @@
     },
     {
       "image": "2.jpeg",
-      "name": "BEAR...here or there",
+      "name": "T-SHIRT 'BEAR...here or there'",
       "price": 315.3364324,
       "article": "T2",
       "category": "Women Clothes",
@@ -20,7 +20,7 @@
     },
     {
       "image": "3.jpg",
-      "name": "Mamas cuty beast",
+      "name": "T-SHIRT 'Mamas cuty beast'",
       "price": 120.22435433,
       "article": "T3",
       "category": "Men Clothes",
@@ -29,7 +29,7 @@
     },
     {
       "image": "4.jpg",
-      "name": "Apha dog",
+      "name": "T-SHIRT 'Apha dog'",
       "price": 53.44345327,
       "article": "T4",
       "category": "Women Clothes",
@@ -38,7 +38,7 @@
     },
     {
       "image": "5.jpg",
-      "name": "Happy milkman",
+      "name": "T-SHIRT 'Happy milkman'",
       "price": 65.89533643745,
       "article": "T5",
       "category": "Women Clothes",
@@ -47,7 +47,7 @@
     },
     {
       "image": "6.jpg",
-      "name": "MR White",
+      "name": "T-SHIRT 'MR White'",
       "price": 187.5625236,
       "article": "T6",
       "category": "Women Clothes",
@@ -56,7 +56,7 @@
     },
     {
       "image": "7.jpg",
-      "name": "Lolas best friends",
+      "name": "T-SHIRT 'Lolas best friends'",
       "price": 221.7825235,
       "article": "T7",
       "category": "Women Clothes",
@@ -65,7 +65,7 @@
     },
     {
       "image": "8.jpg",
-      "name": "Chinese peace of...",
+      "name": "T-SHIRT 'Chinese peace of...'",
       "price": 99.90456542,
       "article": "T8",
       "category": "Men Clothes",
@@ -74,7 +74,7 @@
     },
     {
       "image": "9.jpg",
-      "name": "FrontBackDeveloper",
+      "name": "T-SHIRT 'FrontBackDeveloper'",
       "price": 165.8745678,
       "article": "T9",
       "category": "Women Clothes",
@@ -83,7 +83,7 @@
     },
     {
       "image": "10.jpg",
-      "name": "Granny`s pills",
+      "name": "T-SHIRT 'Granny`s pills'",
       "price": 199.4325654,
       "article": "T10",
       "category": "Men Clothes",
@@ -92,7 +92,7 @@
     },
     {
       "image": "11.jpg",
-      "name": "Xiphone13",
+      "name": "MOBILE 'Xiphone13'",
       "price": 1599.6675473,
       "article": "T11",
       "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
@@ -102,7 +102,7 @@
     },
     {
       "image": "12.jpg",
-      "name": "Xiphone-u",
+      "name": "MONILE 'Xiphone-u'",
       "price": 599.882354326,
       "article": "T12",
       "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
@@ -113,7 +113,7 @@
     },
     {
       "image": "13.jpg",
-      "name": "HellYep",
+      "name": "MOBILE 'HellYep'",
       "price": 1099.785235,
       "article": "T13",
       "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
@@ -123,7 +123,7 @@
     },
     {
       "image": "14.jpg",
-      "name": "ZuZaHer",
+      "name": "MOBILE 'ZuZaHer'",
       "price": 499.5525353,
       "article": "T14",
       "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
@@ -133,7 +133,7 @@
     },
     {
       "image": "15.jpg",
-      "name": "PooPhonE",
+      "name": "MOBILE 'PooPhonE'",
       "price": 599.22235236,
       "article": "T15",
       "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
@@ -143,7 +143,7 @@
     },
     {
       "image": "16.jpg",
-      "name": "KillBill",
+      "name": "MOBILE 'KillBill'",
       "price": 1599.5625235,
       "article": "T16",
       "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
@@ -153,7 +153,7 @@
     },
     {
       "image": "17.jpg",
-      "name": "CallBall",
+      "name": "MOBILE 'CallBall'",
       "price": 325.77235236,
       "article": "T17",
       "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
@@ -163,7 +163,7 @@
     },
     {
       "image": "18.jpg",
-      "name": "ArkaSha",
+      "name": "MOBILE 'ArkaSha'",
       "price": 768.77235236,
       "article": "T18",
       "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
@@ -173,7 +173,7 @@
     },
     {
       "image": "19.jpg",
-      "name": "Sheva",
+      "name": "MOBILE 'Sheva'",
       "price": 677.67235235,
       "article": "T19",
       "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
@@ -183,7 +183,7 @@
     },
     {
       "image": "20.jpg",
-      "name": "COOORUUU",
+      "name": "MOBILE 'COOORUUU'",
       "price": 333.56523564,
       "article": "T20",
       "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
@@ -196,7 +196,7 @@
   "clothes": [
     {
       "image": "1.jpg",
-      "name": "Sweeet",
+      "name": " T-SHIRT 'Sweeet' ",
       "price": 210.1143662,
       "article": "T1",
       "category": "Men Clothes",
@@ -205,7 +205,7 @@
     },
     {
       "image": "2.jpeg",
-      "name": "BEAR...here or there",
+      "name": "T-SHIRT 'BEAR...here or there'",
       "price": 315.3364324,
       "article": "T2",
       "category": "Women Clothes",
@@ -214,7 +214,7 @@
     },
     {
       "image": "3.jpg",
-      "name": "Mamas cuty beast",
+      "name": "T-SHIRT 'Mamas cuty beast'",
       "price": 120.22435433,
       "article": "T3",
       "category": "Men Clothes",
@@ -223,7 +223,7 @@
     },
     {
       "image": "4.jpg",
-      "name": "Apha dog",
+      "name": "T-SHIRT 'Apha dog'",
       "price": 53.44345327,
       "article": "T4",
       "category": "Women Clothes",
@@ -232,7 +232,7 @@
     },
     {
       "image": "5.jpg",
-      "name": "Happy milkman",
+      "name": "T-SHIRT 'Happy milkman'",
       "price": 65.89533643745,
       "article": "T5",
       "category": "Women Clothes",
@@ -241,7 +241,7 @@
     },
     {
       "image": "6.jpg",
-      "name": "MR White",
+      "name": "T-SHIRT 'MR White'",
       "price": 187.5625236,
       "article": "T6",
       "category": "Women Clothes",
@@ -250,7 +250,7 @@
     },
     {
       "image": "7.jpg",
-      "name": "Lolas best friends",
+      "name": "T-SHIRT 'Lolas best friends'",
       "price": 221.7825235,
       "article": "T7",
       "category": "Women Clothes",
@@ -259,7 +259,7 @@
     },
     {
       "image": "8.jpg",
-      "name": "Chinese peace of...",
+      "name": "T-SHIRT 'Chinese peace of...'",
       "price": 99.90456542,
       "article": "T8",
       "category": "Men Clothes",
@@ -268,7 +268,7 @@
     },
     {
       "image": "9.jpg",
-      "name": "FrontBackDeveloper",
+      "name": "T-SHIRT 'FrontBackDeveloper'",
       "price": 165.8745678,
       "article": "T9",
       "category": "Women Clothes",
@@ -277,7 +277,7 @@
     },
     {
       "image": "10.jpg",
-      "name": "Granny`s pills",
+      "name": "T-SHIRT 'Granny`s pills'",
       "price": 199.4325654,
       "article": "T10",
       "category": "Men Clothes",
@@ -289,7 +289,7 @@
   "mobile": [
     {
       "image": "11.jpg",
-      "name": "Xiphone13",
+      "name": "MOBILE 'Xiphone13'",
       "price": 1599.6675473,
       "article": "T11",
       "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
@@ -299,7 +299,7 @@
     },
     {
       "image": "12.jpg",
-      "name": "Xiphone-u",
+      "name": "MONILE 'Xiphone-u'",
       "price": 599.882354326,
       "article": "T12",
       "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
@@ -310,7 +310,7 @@
     },
     {
       "image": "13.jpg",
-      "name": "HellYep",
+      "name": "MOBILE 'HellYep'",
       "price": 1099.785235,
       "article": "T13",
       "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
@@ -320,7 +320,7 @@
     },
     {
       "image": "14.jpg",
-      "name": "ZuZaHer",
+      "name": "MOBILE 'ZuZaHer'",
       "price": 499.5525353,
       "article": "T14",
       "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
@@ -330,7 +330,7 @@
     },
     {
       "image": "15.jpg",
-      "name": "PooPhonE",
+      "name": "MOBILE 'PooPhonE'",
       "price": 599.22235236,
       "article": "T15",
       "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
@@ -340,7 +340,7 @@
     },
     {
       "image": "16.jpg",
-      "name": "KillBill",
+      "name": "MOBILE 'KillBill'",
       "price": 1599.5625235,
       "article": "T16",
       "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
@@ -350,7 +350,7 @@
     },
     {
       "image": "17.jpg",
-      "name": "CallBall",
+      "name": "MOBILE 'CallBall'",
       "price": 325.77235236,
       "article": "T17",
       "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
@@ -360,7 +360,7 @@
     },
     {
       "image": "18.jpg",
-      "name": "ArkaSha",
+      "name": "MOBILE 'ArkaSha'",
       "price": 768.77235236,
       "article": "T18",
       "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
@@ -370,7 +370,7 @@
     },
     {
       "image": "19.jpg",
-      "name": "Sheva",
+      "name": "MOBILE 'Sheva'",
       "price": 677.67235235,
       "article": "T19",
       "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
@@ -380,7 +380,7 @@
     },
     {
       "image": "20.jpg",
-      "name": "COOORUUU",
+      "name": "MOBILE 'COOORUUU'",
       "price": 333.56523564,
       "article": "T20",
       "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],

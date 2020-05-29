@@ -20,7 +20,7 @@
                       </div>
                       <ul class="aside-menu">
                           <li v-on:click.prevent="activeLink = 1" v-bind:class="{active: activeLink === 1}"><router-link to="/">ALL PRODUCTS</router-link></li>
-                          <li v-on:click.prevent="activeLink = 2" v-bind:class="{active: activeLink === 2}"><router-link to="/c-clothes-catalog">CLOTHES</router-link></li>
+                          <li v-on:click.prevent="activeLink = 2" v-bind:class="{active: activeLink === 2}"><router-link to="/clothes">CLOTHES</router-link></li>
                           <li v-on:click.prevent="activeLink = 3" v-bind:class="{active: activeLink === 3}"><router-link to="/m-mobile-catalog">MOBILES AND JUDGETS</router-link></li>
                           <li v-on:click.prevent="activeLink = 4" v-bind:class="{active: activeLink === 4}"><a href="">FOOD</a></li>
                           <li v-on:click.prevent="activeLink = 5" v-bind:class="{active: activeLink === 5}"><a href="">BOOKS</a></li>
@@ -42,24 +42,28 @@ import {mapActions, mapGetters} from 'vuex'
     data() {
       return {
         activeLink: 1,
-        searchValue: ''
+        searchValue: '',
       }
     },
     computed: {
       ...mapGetters([
-        'SEARCH_VALUE'
+        'SEARCH_VALUE',
+        'SEARCH_VALUE_CLOTHES'
       ])
     },
     methods: {
       ...mapActions([
-        'GET_SEARCH_VALUE_TO_VUEX'
+        'GET_SEARCH_VALUE_TO_VUEX',
+        'GET_SEARCH_VALUE_TO_VUEX_CLOTHES'
       ]),
       search(value) {
         this.GET_SEARCH_VALUE_TO_VUEX(value);
+        this.GET_SEARCH_VALUE_TO_VUEX(value);
       },
       clearSearchField() {
-        this.searchValue = ''
+        this.searchValue = '';
         this.GET_SEARCH_VALUE_TO_VUEX();
+        this.GET_SEARCH_VALUE_TO_VUEX_CLOTHES();
       }
     }
   }

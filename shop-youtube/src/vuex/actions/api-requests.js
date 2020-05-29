@@ -14,4 +14,17 @@ export default {
         return error;
       })
   },
+  GET_PRODUCTS_FROM_API_CLOTHES({commit}) {
+    return axios('http://localhost:3000/clothes', {
+      method: "GET"
+    })
+      .then((productsClothes) => {
+        commit('SET_PRODUCTS_TO_STATE_CLOTHES', productsClothes.data);
+        return productsClothes;
+      })
+      .catch((error) => {
+        console.log(error)
+        return error;
+      })
+  },
 }

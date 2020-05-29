@@ -4,6 +4,7 @@ import Router from 'vue-router'
 
 import vCatalog from '../components/catalog/v-catalog'
 import vCart from '../components/cart/v-cart'
+import cClothesCatalog from '../components/productsCateg/clothes/c-clothes-catalog'
 //added components bettween them is a link
 
 Vue.use(Router);
@@ -14,6 +15,11 @@ let router = new Router({
             path: '/',
             name: 'catalog',
             component: vCatalog
+        },
+        {
+            path: '/clothes',
+            name: 'clothes',
+            component: cClothesCatalog
         },
         {
             path: '/cart',
