@@ -2,7 +2,7 @@
   <div>
         <keep-alive>
           <div id="app">
-            <!--<mainPage></mainPage>-->
+            <mainPage></mainPage>
             <v-header/>     
             <router-view></router-view> 
           </div>
@@ -11,14 +11,14 @@
 </template>
 
 <script>
-  //import mainPage from './components/mainPage/mainPage' 
+  import mainPage from './components/mainPage/mainPage' 
   import vHeader from './components/layouts/v-header'
   import {mapActions, mapGetters} from 'vuex'
 
   export default {
     name: 'app',
     components:{
-     // mainPage,
+     mainPage,
       vHeader
     },
        computed: {
@@ -68,6 +68,6 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 3%;
 }
 </style>

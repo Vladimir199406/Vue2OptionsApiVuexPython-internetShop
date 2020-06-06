@@ -12,6 +12,7 @@
           v-for="option in options"
           :key="option.value"
           @click="selectOption(option)"
+          class="pOption"
       >
         {{option.name}}
       </p>
@@ -64,10 +65,11 @@
 <style>
   .v-select {
     position: relative;
-    width: 200px;
+    width: 150px;
     cursor: pointer;
     text-align: left;
-    border-radius: 20px;
+    text-align: center;
+    font-weight: 700;
   }
   .title {
     border: solid 1px #aeaeae;
@@ -75,6 +77,12 @@
   }
   .v-select p {
     margin: 0;
+    border-radius: 5px;
+  }
+
+  .pOption{
+    padding-top:10px;
+    font-weight: 500;
   }
 
   .options {
@@ -83,8 +91,9 @@
     position: absolute;
     top: 30px;
     left: 0;
-    width: 100%;
+    width: 133px;
     padding: 8px;
+    border-radius: 0px 0px 10px 10px;
   }
 
   .options p:hover {

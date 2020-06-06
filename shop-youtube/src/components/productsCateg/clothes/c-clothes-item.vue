@@ -10,13 +10,85 @@
         @closePopup="closeInfoPopup"
         @rightBtnAction="addToCart"
     >
-      <img class="v-catalog-item__image" :src=" require('../../../assets/images/' + product_data.image) " alt="img">
+
+      <!--BELOW IS A FORM OF PICTURE CHANGE-->
       <div>
+        <div style="display:flex; justify-content: space-around; align-items: center; width: 100%">
+          <label v-for="sideToChoose in $options.sideNameOfProduct" 
+                :key="sideToChoose" 
+                style="margin-right: 2rem"
+          >
+              <input 
+                  type="radio" 
+                  :value="sideToChoose" 
+                  v-model="selectedSide"
+                  class="radio-buttons"
+              >
+              {{sideToChoose}}
+          </label>
+        </div>
+        <span v-if="selectedSide == 'Front' ">
+          <img :src="sideImageFront" 
+              :alt="selectedSide"
+              class="popupImage"
+        >
+        </span>
+        <span v-if="selectedSide == 'Back' ">
+          <img :src="sideImageBack" 
+              :alt="selectedSide"
+              class="popupImage"
+          >
+        </span>
+        <span v-if="selectedSide == 'Left' ">
+          <img :src="sideImageLeftSide" 
+              :alt="selectedSide"
+              class="popupImage"
+          >
+        </span>
+        <span v-if="selectedSide == 'Right' ">
+          <img :src="sideImageRightSide" 
+              :alt="selectedSide"
+              class="popupImage"
+          >
+        </span>
+      </div>
+      <!--<img class="v-catalog-item__image" :src=" require('../../assets/images/' + product_data.image) " alt="img">-->
+      <!--ABOVE IS A FORM OF PICTURE CHANGE-->
+
+      <!--<img class="v-catalog-item__image" :src=" require('../../../assets/images/' + product_data.image) " alt="img">-->
+      <div>
+
+        <!--BELOW IS A GLOBAL PRODUCT RATING FORM-->
+        <div class="rateGlobal">
+          Total rate: 
+          <b-form-rating 
+            v-model = "valueTotalOfProduct" 
+            readonly 
+            precision = "2" 
+            >
+            </b-form-rating > 
+          <!--<p  class = "mt-2 " > Global : {{valueTotalOfProduct}} </p> -->
+        </div >
+        <!--ABOVE IS A GLOBAL PRODUCT RATING FORM-->
+
         <p class="v-catalog-item__name">Article: {{product_data.article}}</p>
         <p class="v-catalog-item__price">Price: {{product_data.price | toFix}} Р.</p>
         <p class="v-catalog-item__price">Category: {{product_data.category}}</p>
+        
+        <!--BELOW IS A PERSONAL RATING FORM-->
+        <div>You rate:
+          <b-form-rating  v-model="valuePersonal" 
+                          variant="warning" 
+                          color = "gold" 
+                          show-clear icon-clear = "slash-circle"
+                          class="mb-2">        
+          </b-form-rating>
+          <!--<p class="mt-2">Value: {{ value }}</p>-->
+        </div>
+        <!--ABOVE IS A PERSONAL RATING FORM-->
+
         <!--BELOW IS A DESICION FOR AN OPTION OF A PRODUCT-->
-        <div>
+        <div class="selectVariant">
           Select: 
           <select v-model="selectedSize" class="selectWindow">
             <option disabled value="">Select variant:</option>
@@ -38,7 +110,7 @@
       @closeAlert="closeAlertPopupInfo"
      >
      </v-alert-popup>
-    <img class="v-catalog-item__image" :src=" require('../../../assets/images/' + product_data.image) " alt="img" >
+    <img class="v-catalog-item__image" :src=" require('../../../assets/images/' + product_data.image[0]) " alt="img" >
     <p class="v-catalog-item__name">{{product_data.name}}</p>
     <p class="v-catalog-item__price">Price: {{product_data.price | toFix}}</p>
     <button
@@ -78,6 +150,10 @@
     },
     data() {
       return {
+        pictures: this.product_data.image,
+        selectedSide: "Front",
+        valuePersonal: null,
+        valueTotalOfProduct: 0.00,
         isInfoPopupVisible: false,
         isAlertPopupVisible: false,
         selectedSize: 'NOPE',
@@ -94,7 +170,25 @@
     filters: {
       toFix
     },
-    computed: {},
+    computed: {
+        sideImageFront(picture) {
+         picture =  this.pictures[0];
+         return require(`../../../assets/images/${picture}`);
+        },
+        sideImageBack(picture) {
+         picture =  this.pictures[1];
+         return require(`../../../assets/images/${picture}`);
+        },
+        sideImageLeftSide(picture) {
+         picture =  this.pictures[2];
+         return require(`../../../assets/images/${picture}`);
+        },
+        sideImageRightSide(picture) {
+         picture =  this.pictures[3];
+         return require(`../../../assets/images/${picture}`);
+        }
+    },
+    sideNameOfProduct: ["Front", "Back", "Left", "Right"],
     methods: {
       selectedSizeChangeAddToProductData: function(){
         this.product_data.selectedSize = this.selectedSize;
@@ -143,11 +237,12 @@
     &__image {
       width: 100px;
       height: 100px;
+       border-radius: 10px;
     }
   }
   .v-catalog-item__show-info{
     color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
     background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
   }
@@ -158,6 +253,9 @@
     cursor: pointer;
     background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
   }
+  .selectVariant{
+    margin-top: 8%;
+  }
   .selectWindow{
     border-radius: 10px;
     cursor: pointer;
@@ -167,5 +265,12 @@
   }
   button{
     cursor: pointer;
+  }
+  .mb-2{
+    cursor: pointer;
+    padding-left: 10px;
+  }
+  .rateGlobal{
+    margin-top: 20px;
   }
 </style>

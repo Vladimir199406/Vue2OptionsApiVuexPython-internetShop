@@ -6,28 +6,30 @@
                         <div class="search-field">
                             <input
                                 type="text"
-                                v-model="searchValue"
+                                v-model="searchValue" 
+                                placeholder="Please, enter Your request"
                             >
-                            <button class="search_btn">
-                              <i class="material-icons" @click="search(searchValue)">search</i>
+                            <button class="search_btn" @click="search(searchValue)">
+                              <i class="material-icons">search</i>
                             </button>
-                            <button class="search_btn">
-                              <i class="material-icons" @click="clearSearchField">cancel</i>
-                            </button>
+                            
                         </div>
+                        <button class="canselSearchBTN" @click="clearSearchField">
+                              <i class="material-icons" >clear search</i>
+                            </button>
                           <img src="../../assets/EDV-logo.jpg" alt="" class="EDVimage">
                           <h2>Categories:</h2>
                       </div>
                       <ul class="aside-menu">
-                          <li v-on:click.prevent="activeLink = 1" v-bind:class="{active: activeLink === 1}"><router-link to="/">ALL PRODUCTS</router-link></li>
-                          <li v-on:click.prevent="activeLink = 2" v-bind:class="{active: activeLink === 2}"><router-link to="/clothes">CLOTHES</router-link></li>
-                          <li v-on:click.prevent="activeLink = 3" v-bind:class="{active: activeLink === 3}"><router-link to="/m-mobile-catalog">MOBILES AND JUDGETS</router-link></li>
-                          <li v-on:click.prevent="activeLink = 4" v-bind:class="{active: activeLink === 4}"><a href="">FOOD</a></li>
-                          <li v-on:click.prevent="activeLink = 5" v-bind:class="{active: activeLink === 5}"><a href="">BOOKS</a></li>
-                          <li v-on:click.prevent="activeLink = 6" v-bind:class="{active: activeLink === 6}"><a href="">TV`s</a></li>
-                          <li v-on:click.prevent="activeLink = 7" v-bind:class="{active: activeLink === 7}"><a href="">AUDIO</a></li>
-                          <li v-on:click.prevent="activeLink = 8" v-bind:class="{active: activeLink === 8}"><a href="">CONSOLES</a></li>
-                          <li v-on:click.prevent="activeLink = 9" v-bind:class="{active: activeLink === 9}"><a href="">GARDEN TOOLS</a></li>                    
+                          <li v-on:click.prevent="activeLink = 1" v-bind:class="{active: activeLink === 1}" @click="clearSearchField"><router-link to="/">ALL PRODUCTS</router-link></li>
+                          <li v-on:click.prevent="activeLink = 2" v-bind:class="{active: activeLink === 2}" @click="clearSearchField"><router-link to="/clothes">CLOTHES</router-link></li>
+                          <li v-on:click.prevent="activeLink = 3" v-bind:class="{active: activeLink === 3}" @click="clearSearchField"><router-link to="/m-mobile-catalog">MOBILES AND JUDGETS</router-link></li>
+                          <li v-on:click.prevent="activeLink = 4" v-bind:class="{active: activeLink === 4}" @click="clearSearchField"><a href="">FOOD</a></li>
+                          <li v-on:click.prevent="activeLink = 5" v-bind:class="{active: activeLink === 5}" @click="clearSearchField"><a href="">BOOKS</a></li>
+                          <li v-on:click.prevent="activeLink = 6" v-bind:class="{active: activeLink === 6}" @click="clearSearchField"><a href="">TV`s</a></li>
+                          <li v-on:click.prevent="activeLink = 7" v-bind:class="{active: activeLink === 7}" @click="clearSearchField"><a href="">AUDIO</a></li>
+                          <li v-on:click.prevent="activeLink = 8" v-bind:class="{active: activeLink === 8}" @click="clearSearchField"><a href="">CONSOLES</a></li>
+                          <li v-on:click.prevent="activeLink = 9" v-bind:class="{active: activeLink === 9}" @click="clearSearchField"><a href="">GARDEN TOOLS</a></li>                    
                       </ul>
                   </nav>
                 </aside>
@@ -70,8 +72,24 @@ import {mapActions, mapGetters} from 'vuex'
 </script>
 
 <style lang="scss">
-
-
+  input{
+    height: 30px;
+    border-radius: 5px;
+  }
+  .canselSearchBTN{
+    margin-left: 36px;
+      background: transparent;
+      margin-top: 1px;
+      margin-bottom: 3%;
+      color: #fff;
+      background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+      border: none;
+      border-radius: 6px;
+      height: 32px;
+      font-weight: 700;
+      font-family: sans-serif;
+      cursor: pointer;
+  }
   .EDVimage{
     width: 120px;
     height: 70px;
@@ -106,7 +124,7 @@ import {mapActions, mapGetters} from 'vuex'
       color: #fff;
       background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
       border: none;
-      border-radius: 10px;
+      border-radius: 6px;
       height: 32px;
       font-weight: 700;
       font-family: sans-serif;
@@ -122,7 +140,6 @@ import {mapActions, mapGetters} from 'vuex'
 
     nav ul 
     {   border-radius: 10px;
-        background: #1D8FE1;
         margin: 0;
         padding: 0;
     }
@@ -186,18 +203,16 @@ import {mapActions, mapGetters} from 'vuex'
     }
 
     .aside-menu a {
-        color: #8f8f8f;
-        color: white;
+        color: #5b49af;
         font-weight: 700;
     }
 
 
-    aside > h2 {
-        background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+    h2 {
         font: 14px 'Oswald', sans-serif;
-        color: #fff;
-        padding: 10px;
-        margin: 30px 0 0 0;
+        color: #8f8f8f;
+        margin-right: 100px;
+        font-size: 30px;
     }
 
     aside > p {
@@ -207,10 +222,11 @@ import {mapActions, mapGetters} from 'vuex'
         margin: 0;
     }
     .active {
-      border-radius: 10px;
-      color: red;
+      text-align: center;
+      border-radius: 30px;
       font-size: 3vh;
+      font-weight: 700;
+      font-style: italic;
       background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
-      background-color: #020202;
     }
 </style>

@@ -2,7 +2,7 @@
   <div class="popup_wrapper" ref="popup_wrapper">
     <div class='v-popup'>
       <div class="v-popup__header">
-        <span>{{popupTitle}}</span>
+        <span class="popupTitle">{{popupTitle}}</span>
       </div>
       <div class="v-popup__content">
         <slot></slot>
@@ -56,12 +56,11 @@
 </script>
 
 <style lang="scss">
-  .itemName{
+  .popupTitle{
     background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
     color:white;
     border-radius: 10px;
     font-size: 100%;
-    width: 120%;
   }
   .popup_wrapper {
     margin-left: 21%;
@@ -79,7 +78,7 @@
     padding: 16px;
     position: fixed;
     top: 50px;
-    width: 400px;
+    width: 540px;
     background: #ffffff;
     box-shadow: 0 0 17px 0 #e7e7e7;
     border-radius: 20px;

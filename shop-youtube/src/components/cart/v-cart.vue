@@ -5,8 +5,8 @@
         <div class="v-catalog__link_to_cart">Catalog</div>
         </keep-alive>
       </router-link>
-    <h1>Cart</h1>
-    <p v-if="!cart_data.length">There are no products in cart...</p>
+    <h1 class="cartName">Cart</h1>
+    <p v-if="!cart_data.length" class="pText">There are no products in cart...</p>
     <v-cart-item class="cardItem"
         v-for="(item, index) in cart_data"
         :key="item.idVariant"
@@ -81,9 +81,12 @@
 </script>
 
 <style lang="scss">
-  h1{
+  .cartName{
     margin-left: 20%;
     margin-bottom: 2%;
+  }
+  .pText{
+    margin-left: 21%;
   }
   .v-cart {
     margin-bottom: 100px;
@@ -101,6 +104,7 @@
     }
     .total__name {
       margin-right: $margin*2;
+      margin-left: 20%;
     }
   }
   .v-catalog__link_to_cart

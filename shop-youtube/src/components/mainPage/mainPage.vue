@@ -13,7 +13,7 @@
                 <div class="marginFoto">
                     <figure class="figImg">
                             <h1 class="rules">Choose wisely!</h1>
-                            <img src="./think.jpg" width="280" height="175" alt="">
+                            <div><img src="./think.jpg" width="280" height="175" alt=""></div>
                     </figure>
                     <figure class="figImg">
                             <h1 class="rules">Put it here</h1>
@@ -36,15 +36,6 @@ export default {
 </script>
 
 <style scoped>
-    body 
-    {
-
-        color: #8f8f8f;
-        font: 12px sans-serif;
-        border-top: 5px solid #7e7e7e;
-        margin: 0;
-    }
-
     .EDV
     {
         margin-left: 83%;
@@ -53,28 +44,6 @@ export default {
         color: rgb(97, 33, 218);
         
     }
-
-
-    input[type="password"] 
-    {
-        height: 28px;
-        background-color: white;
-        border: 1px solid #e7e7e7;
-    }
-
-
-
-    input[type="text"] 
-    {
-        margin-top: 1px;
-        background-color: white;
-        border: 1px solid #e7e7e7;
-        height: 30px;
-        color: #b2b2b2;
-        padding: 0 10px;
-        vertical-align: top;
-    }
-
 
     .logRegBlock
     {
@@ -210,11 +179,6 @@ export default {
     .aside-menu li {
         font-weight: 300;
         list-style-type: square;
-        border-top: 1px solid #e7e7e7;
-    }
-
-    .aside-menu li:first-child {
-        border: none;
     }
 
     .aside-menu li.active {
@@ -236,7 +200,6 @@ export default {
 
     aside > p {
         background: #f3f3f3;
-        border: 1px solid #e7e7e7;
         padding: 10px;
         margin: 0;
     }
@@ -248,6 +211,7 @@ export default {
     section {
         margin-left: 280px;
         padding-bottom: 50px;
+        border-radius: 10px;
     }
 
     blockquote {
@@ -282,12 +246,14 @@ export default {
         margin: 0;
         font-family: sans-serif;
         font-weight: 300;
+        border-radius: 10px;
     }
 
     figure img {
         display: block;
-        border: 1px solid #fff;
-        outline: 1px solid #c9c9c9;
+        border: 3px solid rgb(89, 74, 173);
+        box-shadow: 0 0 10px #444;
+        border-radius: 10px;
     }
 
     .figImg{
@@ -299,12 +265,14 @@ export default {
         margin-top: 3%;
         margin-left: 2%;
         justify-content: space-between;
+
     }
 
     figure figcaption {
         font-size: 16px;
         font-weight: 300;
         margin-top: 5px;
+
     }
 
     figure figcaption span {
@@ -336,9 +304,5 @@ export default {
     {
         border-radius: 20px;
         margin-left: 5%;
-    }
-
-        img{
-        border-radius: 20px;
     }
 </style>

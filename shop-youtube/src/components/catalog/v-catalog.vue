@@ -9,7 +9,7 @@
         <div class="v-catalog__link_to_cart">Cart: {{CART.length}}</div>
         </keep-alive>
       </router-link>
-    <h1>Catalog</h1>
+    <h1 class="catalogClassName">Catalog</h1>
     <div class="filters">
       <v-select
           :selected="selected"
@@ -66,14 +66,18 @@
     props: {},
     data() {
       return {
+        //BELOW ARE VARIANTS OF CATEGORIES BY the "value" 
+        // it is from vuex "value" == "state.searchValue" 
+        //"state.searchValue" is in 'store.js'
+        // REMEMBER about 'select' component
         categories: [
-          {name: 'All', value: 'ALL'},
+          {name: 'All products', value: 'All products'},
           {name: 'Men Clothes', value: 'Men Clothes'},
           {name: 'Women Clothes', value: 'Women Clothes'},
           {name: 'Big Screen phones', value: 'Big Screen phones'},
           {name: 'Little Screen phones', value: 'Little Screen phones'}
         ],
-        selected: 'All',
+        selected: 'Select category',
         sortedProducts: [],
         minPrice: 0,
         maxPrice: 10000,
@@ -110,7 +114,7 @@
           this.maxPrice = this.minPrice;
           this.minPrice = tmp;
         }
-        this.sortByCategories(this.products)
+        this.sortByCategories(this.categories.va)
       },
       sortByCategories(category) {
         let vm = this;
@@ -140,7 +144,8 @@
           this.sortedProducts = this.sortedProducts.filter(function (item) {
             return item.name.toLowerCase().includes(value.toLowerCase())
           })
-        } else {
+        } 
+        else {
           this.sortedProducts = this.PRODUCTS;
         }
       }
@@ -155,7 +160,7 @@
       this.GET_PRODUCTS_FROM_API()
         .then((response) => {
           if (response.data) {
-            this.sortByCategories(this.products)
+            this.sortByCategories()
             this.sortProductsBySearchValue(this.SEARCH_VALUE)
           }
         })
@@ -165,8 +170,8 @@
 </script>
 
 <style lang="scss">
-  h1{
-    margin-right: 20%;
+  .catalogClassName{
+    margin-bottom: 2%;
   }
   .v-catalog {
     width: 60%;
@@ -199,7 +204,6 @@
   .v-select{
     background: white;
     margin-left: 3%;
-    border-radius: 20px;
   }
   .range-values{
     width: 200px;

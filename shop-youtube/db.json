@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "image": "1.jpg",
+      "image": ["1.FrontSide.jpg", "1.BackSide.jpg", "1.LeftSide.jpg", "1.RightSide.jpg"],
       "name": " T-SHIRT 'Sweeet' ",
       "price": 210.1143662,
       "article": "T1",
@@ -10,7 +10,7 @@
       "sizesNumber": ["3","2", "6", "0", "0", "4"]
     },
     {
-      "image": "2.jpeg",
+      "image": ["2.FrontSide.jpg", "2.BackSide.jpg", "2.LeftSide.jpg", "2.RightSide.jpg"],
       "name": "T-SHIRT 'BEAR...here or there'",
       "price": 315.3364324,
       "article": "T2",
@@ -19,7 +19,7 @@
       "sizesNumber": ["0","0", "6", "0", "0", "0"]
     },
     {
-      "image": "3.jpg",
+      "image": ["3.FrontSide.jpg", "3.BackSide.jpg", "3.LeftSide.jpg", "3.RightSide.jpg"],
       "name": "T-SHIRT 'Mamas cuty beast'",
       "price": 120.22435433,
       "article": "T3",
@@ -28,7 +28,7 @@
       "sizesNumber": ["3","6", "6", "0", "1", "4"]
     },
     {
-      "image": "4.jpg",
+      "image": ["4.FrontSide.jpg", "4.BackSide.jpg", "4.LeftSide.jpg", "4.RightSide.jpg"],
       "name": "T-SHIRT 'Apha dog'",
       "price": 53.44345327,
       "article": "T4",
@@ -37,7 +37,7 @@
       "sizesNumber": ["3","2", "10", "0", "0", "11"]
     },
     {
-      "image": "5.jpg",
+      "image": ["5.FrontSide.jpg", "5.BackSide.jpg", "5.LeftSide.jpg", "5.RightSide.jpg"],
       "name": "T-SHIRT 'Happy milkman'",
       "price": 65.89533643745,
       "article": "T5",
@@ -46,7 +46,7 @@
       "sizesNumber": ["3","2", "24", "0", "1", "0"]
     },
     {
-      "image": "6.jpg",
+      "image": ["6.FrontSide.jpg", "6.BackSide.jpg", "6.LeftSide.jpg", "6.RightSide.jpg"],
       "name": "T-SHIRT 'MR White'",
       "price": 187.5625236,
       "article": "T6",
@@ -55,7 +55,7 @@
       "sizesNumber": ["3","0", "6", "3", "5", "4"]
     },
     {
-      "image": "7.jpg",
+      "image": ["7.FrontSide.jpg", "7.BackSide.jpg", "7.LeftSide.jpg", "7.RightSide.jpg"],
       "name": "T-SHIRT 'Lolas best friends'",
       "price": 221.7825235,
       "article": "T7",
@@ -64,7 +64,7 @@
       "sizesNumber": ["0","2", "1", "0", "0", "3"]
     },
     {
-      "image": "8.jpg",
+      "image": ["8.FrontSide.jpg", "8.BackSide.jpg", "8.LeftSide.jpg", "8.RightSide.jpg"],
       "name": "T-SHIRT 'Chinese peace of...'",
       "price": 99.90456542,
       "article": "T8",
@@ -73,7 +73,7 @@
       "sizesNumber": ["3","2", "0", "0", "13", "4"]
     },
     {
-      "image": "9.jpg",
+      "image": ["9.FrontSide.jpg", "9.BackSide.jpg", "9.LeftSide.jpg", "9.RightSide.jpg"],
       "name": "T-SHIRT 'FrontBackDeveloper'",
       "price": 165.8745678,
       "article": "T9",
@@ -82,7 +82,7 @@
       "sizesNumber": ["3","0", "6", "0", "43", "4"]
     },
     {
-      "image": "10.jpg",
+      "image": ["10.FrontSide.jpg", "10.BackSide.jpg", "10.LeftSide.jpg", "10.RightSide.jpg"],
       "name": "T-SHIRT 'Granny`s pills'",
       "price": 199.4325654,
       "article": "T10",
@@ -91,7 +91,7 @@
       "sizesNumber": ["3","2", "11", "0", "1", "4"]
     },
     {
-      "image": "11.jpg",
+      "image": ["11.FrontSide.jpg", "11.BackSide.jpg", "11.LeftSide.jpg", "11.RightSide.jpg"],
       "name": "MOBILE 'Xiphone13'",
       "price": 1599.6675473,
       "article": "T11",
@@ -101,7 +101,7 @@
 
     },
     {
-      "image": "12.jpg",
+      "image": ["12.FrontSide.jpg", "12.BackSide.jpg", "12.LeftSide.jpg", "12.RightSide.jpg"],
       "name": "MONILE 'Xiphone-u'",
       "price": 599.882354326,
       "article": "T12",
@@ -112,7 +112,7 @@
 
     },
     {
-      "image": "13.jpg",
+      "image": ["13.FrontSide.jpg", "13.BackSide.jpg", "13.LeftSide.jpg", "13.RightSide.jpg"],
       "name": "MOBILE 'HellYep'",
       "price": 1099.785235,
       "article": "T13",
@@ -122,7 +122,7 @@
 
     },
     {
-      "image": "14.jpg",
+      "image": ["14.FrontSide.jpg", "14.BackSide.jpg", "14.LeftSide.jpg", "14.RightSide.jpg"],
       "name": "MOBILE 'ZuZaHer'",
       "price": 499.5525353,
       "article": "T14",
@@ -132,7 +132,7 @@
 
     },
     {
-      "image": "15.jpg",
+      "image": ["15.FrontSide.jpg", "15.BackSide.jpg", "15.LeftSide.jpg", "15.RightSide.jpg"],
       "name": "MOBILE 'PooPhonE'",
       "price": 599.22235236,
       "article": "T15",
@@ -142,7 +142,7 @@
 
     },
     {
-      "image": "16.jpg",
+      "image": ["16.FrontSide.jpg", "16.BackSide.jpg", "16.LeftSide.jpg", "16.RightSide.jpg"],
       "name": "MOBILE 'KillBill'",
       "price": 1599.5625235,
       "article": "T16",
@@ -152,7 +152,7 @@
 
     },
     {
-      "image": "17.jpg",
+      "image": ["17.FrontSide.jpg", "17.BackSide.jpg", "17.LeftSide.jpg", "17.RightSide.jpg"],
       "name": "MOBILE 'CallBall'",
       "price": 325.77235236,
       "article": "T17",
@@ -162,7 +162,7 @@
 
     },
     {
-      "image": "18.jpg",
+      "image": ["18.FrontSide.jpg", "18.BackSide.jpg", "18.LeftSide.jpg", "18.RightSide.jpg"],
       "name": "MOBILE 'ArkaSha'",
       "price": 768.77235236,
       "article": "T18",
@@ -172,7 +172,7 @@
 
     },
     {
-      "image": "19.jpg",
+      "image": ["19.FrontSide.jpg", "19.BackSide.jpg", "19.LeftSide.jpg", "19.RightSide.jpg"],
       "name": "MOBILE 'Sheva'",
       "price": 677.67235235,
       "article": "T19",
@@ -182,7 +182,7 @@
 
     },
     {
-      "image": "20.jpg",
+      "image": ["20.FrontSide.jpg", "20.BackSide.jpg", "20.LeftSide.jpg", "20.RightSide.jpg"],
       "name": "MOBILE 'COOORUUU'",
       "price": 333.56523564,
       "article": "T20",
@@ -195,7 +195,7 @@
 
   "clothes": [
     {
-      "image": "1.jpg",
+      "image": ["1.FrontSide.jpg", "1.BackSide.jpg", "1.LeftSide.jpg", "1.RightSide.jpg"],
       "name": " T-SHIRT 'Sweeet' ",
       "price": 210.1143662,
       "article": "T1",
@@ -204,7 +204,7 @@
       "sizesNumber": ["3","2", "6", "0", "0", "4"]
     },
     {
-      "image": "2.jpeg",
+      "image": ["2.FrontSide.jpg", "2.BackSide.jpg", "2.LeftSide.jpg", "2.RightSide.jpg"],
       "name": "T-SHIRT 'BEAR...here or there'",
       "price": 315.3364324,
       "article": "T2",
@@ -213,7 +213,7 @@
       "sizesNumber": ["0","0", "6", "0", "0", "0"]
     },
     {
-      "image": "3.jpg",
+      "image": ["3.FrontSide.jpg", "3.BackSide.jpg", "3.LeftSide.jpg", "3.RightSide.jpg"],
       "name": "T-SHIRT 'Mamas cuty beast'",
       "price": 120.22435433,
       "article": "T3",
@@ -222,7 +222,7 @@
       "sizesNumber": ["3","6", "6", "0", "1", "4"]
     },
     {
-      "image": "4.jpg",
+      "image": ["4.FrontSide.jpg", "4.BackSide.jpg", "4.LeftSide.jpg", "4.RightSide.jpg"],
       "name": "T-SHIRT 'Apha dog'",
       "price": 53.44345327,
       "article": "T4",
@@ -231,7 +231,7 @@
       "sizesNumber": ["3","2", "10", "0", "0", "11"]
     },
     {
-      "image": "5.jpg",
+      "image": ["5.FrontSide.jpg", "5.BackSide.jpg", "5.LeftSide.jpg", "5.RightSide.jpg"],
       "name": "T-SHIRT 'Happy milkman'",
       "price": 65.89533643745,
       "article": "T5",
@@ -240,7 +240,7 @@
       "sizesNumber": ["3","2", "24", "0", "1", "0"]
     },
     {
-      "image": "6.jpg",
+      "image": ["6.FrontSide.jpg", "6.BackSide.jpg", "6.LeftSide.jpg", "6.RightSide.jpg"],
       "name": "T-SHIRT 'MR White'",
       "price": 187.5625236,
       "article": "T6",
@@ -249,7 +249,7 @@
       "sizesNumber": ["3","0", "6", "3", "5", "4"]
     },
     {
-      "image": "7.jpg",
+      "image": ["7.FrontSide.jpg", "7.BackSide.jpg", "7.LeftSide.jpg", "7.RightSide.jpg"],
       "name": "T-SHIRT 'Lolas best friends'",
       "price": 221.7825235,
       "article": "T7",
@@ -258,7 +258,7 @@
       "sizesNumber": ["0","2", "1", "0", "0", "3"]
     },
     {
-      "image": "8.jpg",
+      "image": ["8.FrontSide.jpg", "8.BackSide.jpg", "8.LeftSide.jpg", "8.RightSide.jpg"],
       "name": "T-SHIRT 'Chinese peace of...'",
       "price": 99.90456542,
       "article": "T8",
@@ -267,7 +267,7 @@
       "sizesNumber": ["3","2", "0", "0", "13", "4"]
     },
     {
-      "image": "9.jpg",
+      "image": ["9.FrontSide.jpg", "9.BackSide.jpg", "9.LeftSide.jpg", "9.RightSide.jpg"],
       "name": "T-SHIRT 'FrontBackDeveloper'",
       "price": 165.8745678,
       "article": "T9",
@@ -276,7 +276,7 @@
       "sizesNumber": ["3","0", "6", "0", "43", "4"]
     },
     {
-      "image": "10.jpg",
+      "image": ["10.FrontSide.jpg", "10.BackSide.jpg", "10.LeftSide.jpg", "10.RightSide.jpg"],
       "name": "T-SHIRT 'Granny`s pills'",
       "price": 199.4325654,
       "article": "T10",
@@ -288,7 +288,7 @@
 
   "mobile": [
     {
-      "image": "11.jpg",
+      "image": ["11.FrontSide.jpg", "11.BackSide.jpg", "11.LeftSide.jpg", "11.RightSide.jpg"],
       "name": "MOBILE 'Xiphone13'",
       "price": 1599.6675473,
       "article": "T11",
@@ -298,8 +298,8 @@
 
     },
     {
-      "image": "12.jpg",
-      "name": "MONILE 'Xiphone-u'",
+      "image": ["12.FrontSide.jpg", "12.BackSide.jpg", "12.LeftSide.jpg", "12.RightSide.jpg"],
+      "name": "MOBILE 'Xiphone-u'",
       "price": 599.882354326,
       "article": "T12",
       "sizesStock":["Black", "White", "Grey", "Red", "Blue", "Yellow"],
@@ -309,7 +309,7 @@
 
     },
     {
-      "image": "13.jpg",
+      "image": ["13.FrontSide.jpg", "13.BackSide.jpg", "13.LeftSide.jpg", "13.RightSide.jpg"],
       "name": "MOBILE 'HellYep'",
       "price": 1099.785235,
       "article": "T13",
@@ -319,7 +319,7 @@
 
     },
     {
-      "image": "14.jpg",
+      "image": ["14.FrontSide.jpg", "14.BackSide.jpg", "14.LeftSide.jpg", "14.RightSide.jpg"],
       "name": "MOBILE 'ZuZaHer'",
       "price": 499.5525353,
       "article": "T14",
@@ -329,7 +329,7 @@
 
     },
     {
-      "image": "15.jpg",
+      "image": ["15.FrontSide.jpg", "15.BackSide.jpg", "15.LeftSide.jpg", "15.RightSide.jpg"],
       "name": "MOBILE 'PooPhonE'",
       "price": 599.22235236,
       "article": "T15",
@@ -339,7 +339,7 @@
 
     },
     {
-      "image": "16.jpg",
+      "image": ["16.FrontSide.jpg", "16.BackSide.jpg", "16.LeftSide.jpg", "16.RightSide.jpg"],
       "name": "MOBILE 'KillBill'",
       "price": 1599.5625235,
       "article": "T16",
@@ -349,7 +349,7 @@
 
     },
     {
-      "image": "17.jpg",
+      "image": ["17.FrontSide.jpg", "17.BackSide.jpg", "17.LeftSide.jpg", "17.RightSide.jpg"],
       "name": "MOBILE 'CallBall'",
       "price": 325.77235236,
       "article": "T17",
@@ -359,7 +359,7 @@
 
     },
     {
-      "image": "18.jpg",
+      "image": ["18.FrontSide.jpg", "18.BackSide.jpg", "18.LeftSide.jpg", "18.RightSide.jpg"],
       "name": "MOBILE 'ArkaSha'",
       "price": 768.77235236,
       "article": "T18",
@@ -369,7 +369,7 @@
 
     },
     {
-      "image": "19.jpg",
+      "image": ["19.FrontSide.jpg", "19.BackSide.jpg", "19.LeftSide.jpg", "19.RightSide.jpg"],
       "name": "MOBILE 'Sheva'",
       "price": 677.67235235,
       "article": "T19",
@@ -379,7 +379,7 @@
 
     },
     {
-      "image": "20.jpg",
+      "image": ["20.FrontSide.jpg", "20.BackSide.jpg", "20.LeftSide.jpg", "20.RightSide.jpg"],
       "name": "MOBILE 'COOORUUU'",
       "price": 333.56523564,
       "article": "T20",
