@@ -2,7 +2,6 @@
 <!--BELOW, REMEMBER!-->
 <!-- eslint-disable vue/no-use-v-if-with-v-for,vue/no-confusing-v-for-v-if -->
   <div class='v-catalog-item'>
-
     <v-popup
         v-if="isInfoPopupVisible" 
         rightBtnTitle="Add to cart"
@@ -27,31 +26,30 @@
           </label>
         </div>
         <span v-if="selectedSide == 'Front' ">
-          <img :src="sideImageFront" 
+          <img :src="returningVariantOfProductPrictureFront()" 
               :alt="selectedSide"
               class="popupImage"
         >
         </span>
         <span v-if="selectedSide == 'Back' ">
-          <img :src="sideImageBack" 
+          <img :src="returningVariantOfProductPrictureBack()" 
               :alt="selectedSide"
               class="popupImage"
           >
         </span>
         <span v-if="selectedSide == 'Left' ">
-          <img :src="sideImageLeftSide" 
+          <img :src="returningVariantOfProductPrictureLeft()" 
               :alt="selectedSide"
               class="popupImage"
           >
         </span>
         <span v-if="selectedSide == 'Right' ">
-          <img :src="sideImageRightSide" 
+          <img :src="returningVariantOfProductPrictureRight()" 
               :alt="selectedSide"
               class="popupImage"
           >
         </span>
       </div>
-      <!--<img class="v-catalog-item__image" :src=" require('../../assets/images/' + product_data.image) " alt="img">-->
       <!--ABOVE IS A FORM OF PICTURE CHANGE-->
   
       <div>
@@ -68,9 +66,18 @@
           <!--ABOVE IS A GLOBAL PRODUCT RATING FORM-->
           </div >
 
+        <!--BELOW IS A MAIN BLOCK OF INFO-->
         <p class="v-catalog-item__name">Article: {{product_data.article}}</p>
         <p class="v-catalog-item__price">Price: {{product_data.price | toFix}} Р.</p>
         <p class="v-catalog-item__price">Category: {{product_data.category}}</p>
+        <p class="v-catalog-item__price" v-if="product_data.type == 'mobilesAndGadgets' || product_data.type == 'TV'">Screen: {{product_data.screen}}</p>
+        <p class="v-catalog-item__price" v-if="product_data.type == 'mobilesAndGadgets'">Battery: {{product_data.batteryCapacity}}</p>
+        <p class="v-catalog-item__price" v-if="product_data.type == 'mobilesAndGadgets'">Memory: {{product_data.memory}}</p>
+        <p class="v-catalog-item__price" v-if="product_data.type == 'mobilesAndGadgets'">Camera: {{product_data.camera}}</p>
+        <p class="v-catalog-item__price" v-if="product_data.type == 'books'">Author: {{product_data.author}}</p>
+        <p class="v-catalog-item__price" v-if="product_data.type == 'books'">Number of pages: {{product_data.numbersOfPages}}</p>
+        <p class="v-catalog-item__price" v-if="product_data.type == 'books'">Type of cover: {{product_data.coverBinding}}</p>
+        <!--ABOVE IS A MAIN BLOCK OF INFO-->
         
         <!--BELOW IS A PERSONAL RATING FORM-->
         <div>You rate:
@@ -84,22 +91,179 @@
         </div>
         <!--ABOVE IS A PERSONAL RATING FORM-->
 
-        <!--BELOW IS A DESICION FOR AN OPTION OF A PRODUCT-->
-        <div class="selectVariant">
-          Select: 
-          <select v-model="selectedSize" class="selectWindow">
+
+        <!--BELOW IS A DESICION FOR A COLOR OF A PRODUCT-->
+        <div class="selectVariant"
+             v-if="product_data.type != 'books' && 
+                product_data.type != 'consoles' &&
+                product_data.type != 'gardenTools'"
+        >
+          Select color of product: 
+          <select v-model="selectedColor" class="selectWindow">
             <option disabled value="">Select variant:</option>
-            <option v-for="(size, index) in sizes" 
-              v-bind:value="size.value" 
-              v-bind:key="size.text"
-              v-if="product_data.sizesNumber[index] != '0'"
+            <option v-for="(color, index) in colors" 
+              v-bind:value="color.value" 
+              v-bind:key="color.text"
+              v-if="product_data.variantsNumber[index] != '0'"
             >
-                {{ size.value }}
+                {{ color.value }}
             </option>
           </select>          
         </div>
+        <!--ABOVE IS A DESICION FOR A COLOR OF A PRODUCT-->
+
+        
+        <!--BELOW IS A GLOBAL BLOCK TO CHOOSE VARIANTS OF SIZES FOR BOOTS AND CLOTHES-->
+        <div>
+            <div v-if="product_data.type == 'clothes' || product_data.type == 'boots'"
+                class="selectSizeBlock"
+            >
+              <!--BELOW IS A SCRYPT TO CHOOSE VARIANT OF SIZE TO BLACK COLOR OF CLOTHES-->   
+              <span v-if="selectedColor == 'Black'">
+                <div class="selectSize">Select size of product:</div>
+                <label 
+                    v-for="(sizeToChoose, indexSize) in $options.sizeNameOfProduct" 
+                    :key="sizeToChoose"
+                    v-if="product_data.variantsNumberBlack[indexSize] != '0'"               
+                >
+                    <input 
+                          type="radio" 
+                          :value="sizeToChoose" 
+                          v-model="selectedSize"
+                          class="radio-buttons-size"
+                    >
+                      {{sizeToChoose}}
+                      {{selectedSizeShow()}}
+                </label>
+              </span>
+              <!--ABOVE IS A SCRYPT TO CHOOSE VARIANT OF SIZE TO BLACK COLOR OF CLOTHES-->
+
+              <!--BELOW IS A SCRYPT TO CHOOSE VARIANT OF SIZE TO WHITE COLOR OF CLOTHES-->   
+              <span v-if="selectedColor == 'White'">
+                <div class="selectSize">Select size of product:</div>
+                <label 
+                    v-for="(sizeToChoose, indexSize) in $options.sizeNameOfProduct" 
+                    :key="sizeToChoose"
+                    v-if="product_data.variantsNumberWhite[indexSize] != '0'"               
+                >
+                    <input 
+                          type="radio" 
+                          :value="sizeToChoose" 
+                          v-model="selectedSize"
+                          class="radio-buttons-size"
+                    >
+                      {{sizeToChoose}}
+                      {{selectedSizeShow()}}
+                </label>
+              </span>
+              <!--ABOVE IS A SCRYPT TO CHOOSE VARIANT OF SIZE TO WHITE COLOR OF CLOTHES-->
+
+              <!--BELOW IS A SCRYPT TO CHOOSE VARIANT OF SIZE TO GREY COLOR OF CLOTHES-->   
+              <span v-if="selectedColor == 'Grey'">
+                <div class="selectSize">Select size of product:</div>
+                <label 
+                    v-for="(sizeToChoose, indexSize) in $options.sizeNameOfProduct" 
+                    :key="sizeToChoose"
+                    v-if="product_data.variantsNumberGrey[indexSize] != '0'"               
+                >
+                    <input 
+                          type="radio" 
+                          :value="sizeToChoose" 
+                          v-model="selectedSize"
+                          class="radio-buttons-size"
+                    >
+                      {{sizeToChoose}}
+                      {{selectedSizeShow()}}
+                </label>
+              </span>
+              <!--ABOVE IS A SCRYPT TO CHOOSE VARIANT OF SIZE TO GREY COLOR OF CLOTHES-->
+
+              <!--BELOW IS A SCRYPT TO CHOOSE VARIANT OF SIZE TO RED COLOR OF CLOTHES-->   
+              <span v-if="selectedColor == 'Red'">
+                <div class="selectSize">Select size of product:</div>
+                <label 
+                    v-for="(sizeToChoose, indexSize) in $options.sizeNameOfProduct" 
+                    :key="sizeToChoose"
+                    v-if="product_data.variantsNumberRed[indexSize] != '0'"               
+                >
+                    <input 
+                          type="radio" 
+                          :value="sizeToChoose" 
+                          v-model="selectedSize"
+                          class="radio-buttons-size"
+                    >
+                      {{sizeToChoose}}
+                      {{selectedSizeShow()}}
+                </label>
+              </span>
+              <!--ABOVE IS A SCRYPT TO CHOOSE VARIANT OF SIZE TO RED COLOR OF CLOTHES-->
+
+              <!--BELOW IS A SCRYPT TO CHOOSE VARIANT OF SIZE TO BLUE COLOR OF CLOTHES-->   
+              <span v-if="selectedColor == 'Blue'">
+                <div class="selectSize">Select size of product:</div>
+                <label 
+                    v-for="(sizeToChoose, indexSize) in $options.sizeNameOfProduct" 
+                    :key="sizeToChoose"
+                    v-if="product_data.variantsNumberBlue[indexSize] != '0'"               
+                >
+                    <input 
+                          type="radio" 
+                          :value="sizeToChoose" 
+                          v-model="selectedSize"
+                          class="radio-buttons-size"
+                    >
+                      {{sizeToChoose}}
+                      {{selectedSizeShow()}}
+                </label>
+              </span>
+              <!--ABOVE IS A SCRYPT TO CHOOSE VARIANT OF SIZE TO BLUE COLOR OF CLOTHES-->
+
+              <!--BELOW IS A SCRYPT TO CHOOSE VARIANT OF SIZE TO YELLOW COLOR OF CLOTHES-->   
+              <span v-if="selectedColor == 'Yellow'">
+                <div class="selectSize">Select size of product:</div>
+                <label 
+                    v-for="(sizeToChoose, indexSize) in $options.sizeNameOfProduct" 
+                    :key="sizeToChoose"
+                    v-if="product_data.variantsNumberYellow[indexSize] != '0'"               
+                >
+                    <input 
+                          type="radio" 
+                          :value="sizeToChoose" 
+                          v-model="selectedSize"
+                          class="radio-buttons-size"
+                    >
+                      {{sizeToChoose}}
+                      {{selectedSizeShow()}}
+                </label>
+              </span>
+              <!--ABOVE IS A SCRYPT TO CHOOSE VARIANT OF SIZE TO YELLOW COLOR OF CLOTHES-->
+
+              <!--BELOW IS A SCRYPT TO CHOOSE VARIANT OF SIZE TO GREEN COLOR OF CLOTHES-->   
+              <span v-if="selectedColor == 'Green'">
+                <div class="selectSize">Select size of product:</div>
+                <label 
+                    v-for="(sizeToChoose, indexSize) in $options.sizeNameOfProduct" 
+                    :key="sizeToChoose"
+                    v-if="product_data.variantsNumberGreen[indexSize] != '0'"               
+                >
+                    <input 
+                          type="radio" 
+                          :value="sizeToChoose" 
+                          v-model="selectedSize"
+                          class="radio-buttons-size"
+                    >
+                      {{sizeToChoose}}
+                      {{selectedSizeShow()}}
+                </label>
+              </span>
+              <!--ABOVE IS A SCRYPT TO CHOOSE VARIANT OF SIZE TO GREEN COLOR OF CLOTHES-->
+            </div>
+        </div>
+        <!--ABOVE IS A GLOBAL BLOCK TO CHOOSE VARIANTS OF SIZES FOR BOOTS AND CLOTHES-->
+
+
       </div>
-      <span>{{selectedSizeChange()}} {{selectedSizeChangeAddToProductData()}}</span>
+      <span>{{selectedColorChange()}} {{selectedColorChangeAddToProductData()}}</span>
     </v-popup>
     <!--BELOW IS POPUP WHEN OPTION IS NOT SELECTED-->
      <v-alert-popup
@@ -107,7 +271,7 @@
       @closeAlert="closeAlertPopupInfo"
      >
      </v-alert-popup>
-    <img class="v-catalog-item__image" :src=" require('../../assets/images/' + product_data.image[0]) " alt="img" >
+    <img class="v-catalog-item__image" :src=" require('../../assets/images/DefaultColorProducts/' + product_data.image[0]) " alt="img" >
     <p class="v-catalog-item__name">{{product_data.name}}</p>
     <p class="v-catalog-item__price">Price: {{product_data.price | toFix}}</p>
     <button
@@ -117,11 +281,6 @@
       Show info
     </button>
     <br>
-    <!--<button 
-        class="v-catalog-item__add_to_cart_btn btn"
-        @click="addToCart"
-    >Add to cart
-    </button>-->
   </div>
 </template>
 
@@ -149,50 +308,170 @@
       return {
         pictures: this.product_data.image,
         selectedSide: "Front",
+        selectedSize:"NOPE",
         valuePersonal: null,
         valueTotalOfProduct: 0.00,
         isInfoPopupVisible: false,
         isAlertPopupVisible: false,
-        selectedSize: 'NOPE',
-        sizes: [
-          {value: this.product_data.sizesStock[0]},
-          {value: this.product_data.sizesStock[1]},
-          {value: this.product_data.sizesStock[2]},
-          {value: this.product_data.sizesStock[3]},
-          {value: this.product_data.sizesStock[4]},
-          {value: this.product_data.sizesStock[5]}
+        selectedColor: 'NOPE',
+        colors: [
+          {value: this.product_data.colorsStock[0]},
+          {value: this.product_data.colorsStock[1]},
+          {value: this.product_data.colorsStock[2]},
+          {value: this.product_data.colorsStock[3]},
+          {value: this.product_data.colorsStock[4]},
+          {value: this.product_data.colorsStock[5]},
+          {value: this.product_data.colorsStock[6]}
         ]
       }
     },
     filters: {
       toFix
     },
-    computed: {
-        sideImageFront(picture) {
-         picture =  this.pictures[0];
-         return require(`../../assets/images/${picture}`);
-        },
-        sideImageBack(picture) {
-         picture =  this.pictures[1];
-         return require(`../../assets/images/${picture}`);
-        },
-        sideImageLeftSide(picture) {
-         picture =  this.pictures[2];
-         return require(`../../assets/images/${picture}`);
-        },
-        sideImageRightSide(picture) {
-         picture =  this.pictures[3];
-         return require(`../../assets/images/${picture}`);
-        }
-    },
+    computed: {},
     sideNameOfProduct: ["Front", "Back", "Left", "Right"],
+    sizeNameOfProduct:["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
     methods: {
-      selectedSizeChangeAddToProductData: function(){
-        this.product_data.selectedSize = this.selectedSize;
-        this.product_data.idVariant = this.product_data.article + this.product_data.selectedSize;
+      returningVariantOfProductPrictureFront: function(){
+        if(this.selectedColor == 'NOPE'){
+          return require(`../../assets/images/DefaultColorProducts/` + this.pictures[0])
+        }
+        else if(this.selectedColor == "Black"){
+           return require(`../../assets/images/BlackColorProducts/` + this.pictures[0])
+        }
+        else if(this.selectedColor == "White"){
+           return require(`../../assets/images/WhiteColorProducts/` + this.pictures[0])
+        }
+        else if(this.selectedColor == "Grey"){
+           return require(`../../assets/images/GreyColorProducts/` + this.pictures[0])
+        }
+         else if(this.selectedColor == "Red"){
+           return require(`../../assets/images/RedColorProducts/` + this.pictures[0])
+        }
+         else if(this.selectedColor == "Blue"){
+           return require(`../../assets/images/BlueColorProducts/` + this.pictures[0])
+        }
+         else if(this.selectedColor == "Yellow"){
+           return require(`../../assets/images/YellowColorProducts/` + this.pictures[0])
+        }
+         else if(this.selectedColor == "Green"){
+           return require(`../../assets/images/GreenColorProducts/` + this.pictures[0])
+        }
+         else{
+          return require(`../../assets/images/DefaultColorProducts/` + this.pictures[0])
+        }
       },
-      selectedSizeChange: function(){
-        console.log(this.selectedSize);
+      returningVariantOfProductPrictureBack: function(){
+        if(this.selectedColor == 'NOPE'){
+          return require(`../../assets/images/DefaultColorProducts/` + this.pictures[1])
+        }
+        else if(this.selectedColor == "Black"){
+           return require(`../../assets/images/BlackColorProducts/` + this.pictures[1])
+        }
+        else if(this.selectedColor == "White"){
+           return require(`../../assets/images/WhiteColorProducts/` + this.pictures[1])
+        }
+         else if(this.selectedColor == "Grey"){
+           return require(`../../assets/images/GreyColorProducts/` + this.pictures[1])
+        }
+        else if(this.selectedColor == "Red"){
+           return require(`../../assets/images/RedColorProducts/` + this.pictures[1])
+        }
+         else if(this.selectedColor == "Blue"){
+           return require(`../../assets/images/BlueColorProducts/` + this.pictures[1])
+        }
+         else if(this.selectedColor == "Yellow"){
+           return require(`../../assets/images/YellowColorProducts/` + this.pictures[1])
+        }
+         else if(this.selectedColor == "Green"){
+           return require(`../../assets/images/GreenColorProducts/` + this.pictures[1])
+        }
+        else{
+          return require(`../../assets/images/DefaultColorProducts/` + this.pictures[1])
+        }
+      },
+      returningVariantOfProductPrictureLeft: function(){
+        if(this.selectedColor == 'NOPE'){
+          return require(`../../assets/images/DefaultColorProducts/` + this.pictures[2])
+        }
+        else if(this.selectedColor == "Black"){
+           return require(`../../assets/images/BlackColorProducts/` + this.pictures[2])
+        }
+        else if(this.selectedColor == "White"){
+           return require(`../../assets/images/WhiteColorProducts/` + this.pictures[2])
+        }
+         else if(this.selectedColor == "Grey"){
+           return require(`../../assets/images/GreyColorProducts/` + this.pictures[2])
+        }
+         else if(this.selectedColor == "Red"){
+           return require(`../../assets/images/RedColorProducts/` + this.pictures[2])
+        }
+         else if(this.selectedColor == "Blue"){
+           return require(`../../assets/images/BlueColorProducts/` + this.pictures[2])
+        }
+         else if(this.selectedColor == "Yellow"){
+           return require(`../../assets/images/YellowColorProducts/` + this.pictures[2])
+        }
+         else if(this.selectedColor == "Green"){
+           return require(`../../assets/images/GreenColorProducts/` + this.pictures[2])
+        }
+         else{
+          return require(`../../assets/images/DefaultColorProducts/` + this.pictures[2])
+        }
+      },
+      returningVariantOfProductPrictureRight: function(){
+        if(this.selectedColor == 'NOPE'){
+          return require(`../../assets/images/DefaultColorProducts/` + this.pictures[3])
+        }
+        else if(this.selectedColor == "Black"){
+           return require(`../../assets/images/BlackColorProducts/` + this.pictures[3])
+        }
+        else if(this.selectedColor == "White"){
+           return require(`../../assets/images/WhiteColorProducts/` + this.pictures[3])
+        }
+        else if(this.selectedColor == "Grey"){
+           return require(`../../assets/images/GreyColorProducts/` + this.pictures[3])
+        }
+         else if(this.selectedColor == "Red"){
+           return require(`../../assets/images/RedColorProducts/` + this.pictures[3])
+        }
+         else if(this.selectedColor == "Blue"){
+           return require(`../../assets/images/BlueColorProducts/` + this.pictures[3])
+        }
+         else if(this.selectedColor == "Yellow"){
+           return require(`../../assets/images/BlueColorProducts/` + this.pictures[3])
+        }
+         else if(this.selectedColor == "Green"){
+           return require(`../../assets/images/GreenColorProducts/` + this.pictures[3])
+        }
+         else{
+          return require(`../../assets/images/DefaultColorProducts/` + this.pictures[3])
+        }
+      },
+      //ABOVE IS A SCRIPT TO RETURN BLACK COLOR VARIANTS OF PRODUCTS
+
+      //BELOW IS AN IMPORTANT SCRYPT TO ADD 'idVariant' property, it make product individual
+      selectedColorChangeAddToProductData: function(){
+        if(this.product_data.type != 'books' && 
+           this.product_data.type != 'consoles'  && 
+           this.product_data.type != 'gardenTools'){
+           this.product_data.selectedColor = this.selectedColor;
+          if(this.product_data.type == 'clothes' || this.product_data.type == 'boots'){
+            this.product_data.selectedSize = this.selectedSize;
+            this.product_data.idVariant = this.product_data.article + this.product_data.selectedColor + this.product_data.selectedSize;
+          }
+          else{
+            this.product_data.idVariant = this.product_data.article + this.product_data.selectedColor;
+          }
+        }
+        else{
+          this.product_data.idVariant = 'product' + this.product_data.article;
+        }
+      },
+      //ABOVE IS AN IMPORTANT SCRYPT TO ADD 'idVariant' property, it make product individual
+
+      selectedColorChange: function(){
+        console.log(this.selectedColor);
       },
       showPopupInfo() {
         this.isInfoPopupVisible = true;
@@ -206,14 +485,33 @@
       closeAlertPopupInfo(){
         this.isAlertPopupVisible = false;
       },
+
+      //BELOW IS A SCRYPT FOR ADDING PRODUCT AND AN IMPORTANT TEST FOR AN 'alertPopup' Window
       addToCart() {
-        if(this.selectedSize != 'NOPE'){
-        this.$emit('addToCart', this.product_data);
-        //console.log(this.product_data.idVariant)
+        if(this.product_data.type == 'clothes' || this.product_data.type == 'boots'){
+            if(this.selectedColor != 'NOPE' && this.selectedSize != 'NOPE'){
+              this.$emit('addToCart', this.product_data);
+            }
+            else{
+              this.showAlertPopupInfo()
+            }
         }
         else{
-          this.showAlertPopupInfo()
+            if(this.selectedColor != 'NOPE' || 
+               this.product_data.type == 'books' || 
+               this.product_data.type == 'consoles' || 
+               this.product_data.type == 'gardenTools'){
+            this.$emit('addToCart', this.product_data);
+            }
+            else{
+              this.showAlertPopupInfo()
+            }
         }
+      },
+      //ABOVE IS A SCRYPT FOR ADDING PRODUCT AND AN IMPORTANT TEST FOR AN 'alertPopup' Window
+
+      selectedSizeShow: function(){
+        console.log(this.selectedSize)
       }
     },
     mounted() {
@@ -242,6 +540,7 @@
     color: white;
     cursor: pointer;
     background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+    border-radius: 5px;
   }
   .v-catalog-item__add_to_cart_btn{
     color: white;
@@ -276,5 +575,16 @@
   }
   .radio-buttons{
     cursor: pointer;
+  }
+  .selectSizeBlock{
+    margin-right: 2rem;
+  }
+  .radio-buttons-size{
+    cursor: pointer;
+    margin-bottom: 8%;
+
+  }
+  .selectSize{
+    margin-top: 8%;
   }
 </style>

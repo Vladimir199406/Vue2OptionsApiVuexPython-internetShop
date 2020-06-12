@@ -17,19 +17,18 @@
                         <button class="canselSearchBTN" @click="clearSearchField">
                               <i class="material-icons" >clear search</i>
                             </button>
-                          <img src="../../assets/EDV-logo.jpg" alt="" class="EDVimage">
-                          <h2>Categories:</h2>
+                          
+                          
                       </div>
                       <ul class="aside-menu">
-                          <li v-on:click.prevent="activeLink = 1" v-bind:class="{active: activeLink === 1}" @click="clearSearchField"><router-link to="/">ALL PRODUCTS</router-link></li>
+                          <li v-on:click.prevent="activeLink = 1" v-bind:class="{active: activeLink === 1}" @click="clearSearchField"><router-link to="/Home">ALL PRODUCTS</router-link></li>
                           <li v-on:click.prevent="activeLink = 2" v-bind:class="{active: activeLink === 2}" @click="clearSearchField"><router-link to="/clothes">CLOTHES</router-link></li>
-                          <li v-on:click.prevent="activeLink = 3" v-bind:class="{active: activeLink === 3}" @click="clearSearchField"><router-link to="/m-mobile-catalog">MOBILES AND JUDGETS</router-link></li>
-                          <li v-on:click.prevent="activeLink = 4" v-bind:class="{active: activeLink === 4}" @click="clearSearchField"><a href="">FOOD</a></li>
-                          <li v-on:click.prevent="activeLink = 5" v-bind:class="{active: activeLink === 5}" @click="clearSearchField"><a href="">BOOKS</a></li>
-                          <li v-on:click.prevent="activeLink = 6" v-bind:class="{active: activeLink === 6}" @click="clearSearchField"><a href="">TV`s</a></li>
-                          <li v-on:click.prevent="activeLink = 7" v-bind:class="{active: activeLink === 7}" @click="clearSearchField"><a href="">AUDIO</a></li>
-                          <li v-on:click.prevent="activeLink = 8" v-bind:class="{active: activeLink === 8}" @click="clearSearchField"><a href="">CONSOLES</a></li>
-                          <li v-on:click.prevent="activeLink = 9" v-bind:class="{active: activeLink === 9}" @click="clearSearchField"><a href="">GARDEN TOOLS</a></li>                    
+                          <li v-on:click.prevent="activeLink = 3" v-bind:class="{active: activeLink === 3}" @click="clearSearchField"><router-link to="/mobilesAndGadgets">MOBILES AND GADGETS</router-link></li>
+                          <li v-on:click.prevent="activeLink = 5" v-bind:class="{active: activeLink === 5}" @click="clearSearchField"><router-link to="/books">BOOKS</router-link></li>
+                          <li v-on:click.prevent="activeLink = 6" v-bind:class="{active: activeLink === 6}" @click="clearSearchField"><router-link to="/TV">TV</router-link></li>
+                          <li v-on:click.prevent="activeLink = 7" v-bind:class="{active: activeLink === 7}" @click="clearSearchField"><router-link to="/audio">AUDIO</router-link></li>
+                          <li v-on:click.prevent="activeLink = 8" v-bind:class="{active: activeLink === 8}" @click="clearSearchField"><router-link to="/consoles">CONSOLES</router-link></li>
+                          <li v-on:click.prevent="activeLink = 9" v-bind:class="{active: activeLink === 9}" @click="clearSearchField"><router-link to="/garden">GARDEN TOOLS</router-link></li>                    
                       </ul>
                   </nav>
                 </aside>
@@ -90,12 +89,9 @@ import {mapActions, mapGetters} from 'vuex'
       font-family: sans-serif;
       cursor: pointer;
   }
-  .EDVimage{
-    width: 120px;
-    height: 70px;
-    border-radius: 20px;
-  }
+
   .v-header {
+    margin-top: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -224,7 +220,7 @@ import {mapActions, mapGetters} from 'vuex'
     .active {
       text-align: center;
       border-radius: 30px;
-      font-size: 3vh;
+      font-size: 2.3vh;
       font-weight: 700;
       font-style: italic;
       background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);

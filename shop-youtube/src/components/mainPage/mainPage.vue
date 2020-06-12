@@ -12,16 +12,13 @@
                 </blockquote>
                 <div class="marginFoto">
                     <figure class="figImg">
-                            <h1 class="rules">Choose wisely!</h1>
-                            <div><img src="./think.jpg" width="280" height="175" alt=""></div>
+                            <div><img src="./think.jpg" width="285" height="175" alt=""></div>
                     </figure>
                     <figure class="figImg">
-                            <h1 class="rules">Put it here</h1>
-                            <img src="./cart.jpg" width="280" height="175" alt="">
+                            <img src="./cart.jpg" width="285" height="175" alt="">
                     </figure>
                     <figure class="figImg">
-                            <h1 class="rules">Pay and enjoy</h1>
-                            <img src="./pay.jpg" width="280" height="175" alt="">
+                            <img src="./pay.jpg" width="285" height="175" alt="">
                     </figure>
                 </div>
             </section>
@@ -67,6 +64,9 @@ export default {
     {
         max-width: 80%;
         margin: auto;
+        background-image: url(../../assets/EDV-logo.jpg);
+        background-repeat: no-repeat;
+        background-position: top left = left top = 0% 0%;
     }
 
 
@@ -262,8 +262,8 @@ export default {
 
         .marginFoto
     {
-        margin-top: 3%;
-        margin-left: 2%;
+        margin-top: 5%;
+        margin-left: 4%;
         justify-content: space-between;
 
     }
@@ -284,12 +284,6 @@ export default {
         margin-left: 28px;
     }
 
-
-    .rules
-    {
-        margin-bottom: 2%;
-    }
-
     /*PRODUCTS*/
     section > h2 {
         font: 30px sans-serif;
@@ -304,5 +298,6 @@ export default {
     {
         border-radius: 20px;
         margin-left: 5%;
+        width: 92%;
     }
 </style>

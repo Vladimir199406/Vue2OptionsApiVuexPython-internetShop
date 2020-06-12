@@ -130,7 +130,7 @@
       opacity: 1;
     }
     &-leave-active {
-      transition: transform .6s ease, opacity .6s, height .6s .2s;
+      transition: transform .3s ease, opacity .3s, height .3s .2s;
     }
     &-leave-to {
       height: 0;
@@ -139,7 +139,7 @@
     }
 
     &-move {
-      transition: transform .6s ease;
+      transition: transform .3s ease;
     }
 
   }

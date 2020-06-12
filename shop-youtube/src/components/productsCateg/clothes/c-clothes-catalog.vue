@@ -68,8 +68,8 @@
       return {
         categories: [
           {name: 'All clothes', value: 'All clothes'},
-          {name: 'Men Clothes', value: 'Men Clothes'},
-          {name: 'Women Clothes', value: 'Women Clothes'}
+          {name: 'Women T-shirts', value: 'Women T-shirts'},
+          {name: 'Men T-shirts', value: 'Men T-shirts'}
         ],
         selected: 'Select category of clothes',
         sortedProducts: [],

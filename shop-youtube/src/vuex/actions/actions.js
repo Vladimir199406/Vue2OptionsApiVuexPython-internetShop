@@ -5,6 +5,24 @@ export default {
   GET_SEARCH_VALUE_TO_VUEX_CLOTHES ({commit}, value) {
     commit('SET_SEARCH_VALUE_TO_VUEX_CLOTHES', value)
   },
+  GET_SEARCH_VALUE_TO_VUEX_MOBILES_AND_GADGETS ({commit}, value) {
+    commit('SET_SEARCH_VALUE_TO_VUEX_MOBILES_AND_GADGETS', value)
+  },
+  GET_SEARCH_VALUE_TO_VUEX_BOOKS ({commit}, value) {
+    commit('SET_SEARCH_VALUE_TO_VUEX_BOOKS', value)
+  },
+  GET_SEARCH_VALUE_TO_VUEX_TV ({commit}, value) {
+    commit('SET_SEARCH_VALUE_TO_VUEX_TV', value)
+  },
+  GET_SEARCH_VALUE_TO_VUEX_AUDIO ({commit}, value) {
+    commit('SET_SEARCH_VALUE_TO_VUEX_AUDIO', value)
+  },
+  GET_SEARCH_VALUE_TO_VUEX_CONSOLES ({commit}, value) {
+    commit('SET_SEARCH_VALUE_TO_VUEX_CONSOLES', value)
+  },
+  GET_SEARCH_VALUE_TO_VUEX_GARDEN ({commit}, value) {
+    commit('SET_SEARCH_VALUE_TO_VUEX_GARDEN', value)
+  },
   SET_MOBILE({commit}) {
     commit('SWITCH_MOBILE')
   },

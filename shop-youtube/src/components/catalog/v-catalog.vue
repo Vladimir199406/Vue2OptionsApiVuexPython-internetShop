@@ -72,10 +72,24 @@
         // REMEMBER about 'select' component
         categories: [
           {name: 'All products', value: 'All products'},
-          {name: 'Men Clothes', value: 'Men Clothes'},
-          {name: 'Women Clothes', value: 'Women Clothes'},
+          {name: 'Men T-shirts', value: 'Men T-shirts'},
+          {name: 'Women T-shirts', value: 'Women T-shirts'},
           {name: 'Big Screen phones', value: 'Big Screen phones'},
-          {name: 'Little Screen phones', value: 'Little Screen phones'}
+          {name: 'Little Screen phones', value: 'Little Screen phones'},
+          {name: 'Novel', value: 'Novel'},
+          {name: 'Detective', value: 'Detective'},
+          {name: 'Classic literature', value: 'Classic literature'},
+          {name: 'Big Screen TV 4K', value: 'Big Screen TV 4K'},
+          {name: 'Big Screen TV 8K', value: 'Big Screen TV 8K'},
+          {name: 'Economical variant TV', value: 'Economical variant TV'},
+          {name: 'Audio system', value: 'Audio system'},
+          {name: 'Loudspeakers', value: 'Loudspeakers'},
+          {name: 'Headphones', value: 'Headphones'},
+          {name: 'Not portable console', value: 'Not portable console'},
+          {name: 'Portable consoles', value: 'Portable consoles'},
+          {name: 'Bush cutting scissors', value: 'Bush cutting scissors'},
+          {name: 'Watering hose', value: 'Watering hose'},
+          {name: 'Shovel', value: 'Shovel'}
         ],
         selected: 'Select category',
         sortedProducts: [],
