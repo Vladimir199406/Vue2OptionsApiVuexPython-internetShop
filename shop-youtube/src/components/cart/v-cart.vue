@@ -2,10 +2,14 @@
   <div class='v-cart'>
       <router-link :to="{name: 'catalog'}">
         <keep-alive>
-        <div class="v-catalog__link_to_cart">Catalog</div>
+        <div class="v-catalog__link_to_cart">
+          <b-icon icon = "shop" font-scale="2"></b-icon>
+        </div>
         </keep-alive>
       </router-link>
-    <h1 class="cartName">Cart</h1>
+    <h1 class="cartName">
+      <b-icon icon = "cart-fill" font-scale="2.2"></b-icon>
+    </h1>
     <p v-if="!cart_data.length" class="pText">There are no products in cart...</p>
     <v-cart-item class="cardItem"
         v-for="(item, index) in cart_data"
@@ -16,6 +20,7 @@
         @decrement="decrement(index)"
     />
     <div class="v-cart__total">
+      <b-icon icon="gem" font-scale="2"></b-icon>
       <p class="total__name">Total:</p>
       <p>{{cartTotalCost | toFix}}</p>
     </div>
@@ -89,8 +94,10 @@
     margin-left: 21%;
   }
   .v-cart {
+    color: #8f8f8f;
     margin-bottom: 100px;
     &__total {
+      margin-top: 15%;
       position: fixed;
       bottom: 0;
       right: 0;
@@ -101,10 +108,11 @@
       background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
       color: #ffffff;
       font-size: 20px;
+      height: 40px;
     }
     .total__name {
       margin-right: $margin*2;
-      margin-left: 20%;
+      margin-left: 18%;
     }
   }
   .v-catalog__link_to_cart
@@ -113,7 +121,7 @@
     background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
     color: white;
     font-weight: 600;
-    margin-top: 27.3%;
+    margin-top: 12.5%;
     width: 4%;
   }
   .cardItem{

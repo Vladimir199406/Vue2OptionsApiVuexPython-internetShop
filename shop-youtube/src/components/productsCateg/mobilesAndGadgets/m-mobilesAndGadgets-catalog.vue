@@ -6,7 +6,7 @@
     />
       <router-link :to="{name: 'cart', params: {cart_data: CART}}">
         <keep-alive>
-        <div class="v-catalog__link_to_cart">Cart: {{CART.length}}</div>
+          <div class="v-catalog__link_to_cart"> <b-icon icon="cart2" font-scale="2"></b-icon> {{CART.length}}</div>
         </keep-alive>
       </router-link>
     <h1 class="mobilesAndGadgetsCatalogName">Mobiles and gadgets catalog</h1>
@@ -67,11 +67,11 @@
     data() {
       return {
         categories: [
-          {name: 'All mobiles and gadgets', value: 'All mobiles and gadgets'},
+          {name: 'All products', value: 'All products'},
           {name: 'Big Screen phones', value: 'Big Screen phones'},
           {name: 'Little Screen phones', value: 'Little Screen phones'}
         ],
-        selected: 'Select category of mobiles and gadgets',
+        selected: '',
         sortedProducts: [],
         minPrice: 0,
         maxPrice: 10000,

@@ -5,7 +5,7 @@ import commonActions from './actions/actions'
 import apiRequests from './actions/api-requests'
 import mutations from "./mutations/mutations"
 import getters from "./getters/getters"
-//import createPersistedState from 'vuex-persistedstate';
+import createPersistedState from 'vuex-persistedstate';
 //helps to avoid info fallback...
 
 const actions = {...commonActions, ...apiRequests}
@@ -30,7 +30,7 @@ let store = new Vuex.Store({
   mutations,
   actions,
   getters,
-  //plugins: [createPersistedState()]
+  plugins: [createPersistedState()]
 });
 
 export default store;

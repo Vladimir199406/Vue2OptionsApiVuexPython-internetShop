@@ -6,10 +6,10 @@
     />
       <router-link :to="{name: 'cart', params: {cart_data: CART}}">
         <keep-alive>
-        <div class="v-catalog__link_to_cart">Cart: {{CART.length}}</div>
+          <div class="v-catalog__link_to_cart"> <b-icon icon="cart2" font-scale="2"></b-icon> {{CART.length}}</div>
         </keep-alive>
       </router-link>
-    <h1 class="consolesCatalogName">consoles catalog</h1>
+    <h1 class="consolesCatalogName">Consoles catalog</h1>
     <div class="filters">
       <v-select
           :selected="selected"
@@ -67,10 +67,11 @@
     data() {
       return {
         categories: [
+          {name: 'All products', value: 'All products'},
           {name: 'Not portable console', value: 'Not portable console'},
           {name: 'Portable consoles', value: 'Portable consoles'}
         ],
-        selected: 'Select category of consoles',
+        selected: '',
         sortedProducts: [],
         minPrice: 0,
         maxPrice: 10000,

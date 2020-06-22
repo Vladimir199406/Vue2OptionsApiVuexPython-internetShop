@@ -5,7 +5,7 @@
 
     <v-popup
         v-if="isInfoPopupVisible" 
-        rightBtnTitle="Add to cart"
+        rightBtnTitle=""
         :popupTitle="product_data.name"
         @closePopup="closeInfoPopup"
         @rightBtnAction="addToCart"
@@ -67,12 +67,25 @@
           <!--ABOVE IS A GLOBAL PRODUCT RATING FORM-->
           </div >
 
+
         <!--BELOW IS A MAIN BLOCK OF INFO-->
-        <p class="a-audio-item__name">Article: {{product_data.article}}</p>
-        <p class="a-audio-item__price">Price: {{product_data.price | toFix}} Р.</p>
-        <p class="a-audio-item__price">Category: {{product_data.category}}</p>
+        <p class="a-audio-item__name">
+          <b-icon icon="hash" font-scale="1.5"></b-icon> 
+          {{product_data.article}}
+        </p>
+
+        <p class="a-audio-item__price">
+          <b-icon icon="wallet" font-scale="1.5"></b-icon> 
+          {{product_data.price | toFix}} 
+        </p>
+
+        <p class="a-audio-item__price">
+          <b-icon icon="tag" font-scale="1.5"></b-icon> 
+          {{product_data.category}}
+        </p>
         <!--ABOVE IS A MAIN BLOCK OF INFO-->
         
+
         <!--BELOW IS A PERSONAL RATING FORM-->
         <div>You rate:
           <b-form-rating  v-model="valuePersonal" 
@@ -112,15 +125,21 @@
       @closeAlert="closeAlertPopupInfo"
      >
      </v-alert-popup>
-    <img class="a-audio-item__image" :src=" require('../../../assets/images/DefaultColorProducts/' + product_data.image[0]) " alt="img" >
-    <p class="a-audio-item__name">{{product_data.name}}</p>
-    <p class="a-audio-item__price">Price: {{product_data.price | toFix}}</p>
-    <button
-        class="a-audio-item__show-info"
-        @click="showPopupInfo"
-    >
-      Show info
-    </button>
+    <label @click="showPopupInfo"
+           class='labelItem'
+    >     
+      <div>
+        <img class="a-audio-item__image" :src=" require('../../../assets/images/DefaultColorProducts/' + product_data.image[0]) " alt="img" >
+        <p class="a-audio-item__name">{{product_data.name}}</p>
+        <p class="a-audio-item__price">
+          <b-icon icon="wallet" font-scale="1.5"></b-icon> 
+          {{product_data.price | toFix}}
+        </p>
+        <div class="divCartIcon">
+          <b-icon icon="cart" font-scale="2"></b-icon>
+        </div>
+      </div>
+    </label>
     <br>
   </div>
 </template>

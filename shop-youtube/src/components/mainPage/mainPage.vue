@@ -10,7 +10,7 @@
                         EDV company slogan
                     </cite>
                 </blockquote>
-                <div class="marginFoto">
+                <!--<div class="marginFoto">
                     <figure class="figImg">
                             <div><img src="./think.jpg" width="285" height="175" alt=""></div>
                     </figure>
@@ -20,7 +20,7 @@
                     <figure class="figImg">
                             <img src="./pay.jpg" width="285" height="175" alt="">
                     </figure>
-                </div>
+                </div>-->
             </section>
     </div>
 </template>

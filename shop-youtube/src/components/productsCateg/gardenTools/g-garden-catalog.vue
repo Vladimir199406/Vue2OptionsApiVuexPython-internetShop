@@ -6,7 +6,7 @@
     />
       <router-link :to="{name: 'cart', params: {cart_data: CART}}">
         <keep-alive>
-        <div class="v-catalog__link_to_cart">Cart: {{CART.length}}</div>
+          <div class="v-catalog__link_to_cart"> <b-icon icon="cart2" font-scale="2"></b-icon> {{CART.length}}</div>
         </keep-alive>
       </router-link>
     <h1 class="gGardenCatalogName">Garden tools catalog</h1>
@@ -67,11 +67,12 @@
     data() {
       return {
         categories: [
+          {name: 'All products', value: 'All products'},
           {name: 'Shovel', value: 'Shovel'},
           {name: 'Watering hose', value: 'Watering hose'},
           {name: 'Bush cutting scissors', value: 'Bush cutting scissors'}
         ],
-        selected: 'Select category of garden tools',
+        selected: '',
         sortedProducts: [],
         minPrice: 0,
         maxPrice: 10000,

@@ -3,7 +3,11 @@
     <p
         class="title"
         @click="areOptionsVisible = !areOptionsVisible"
-    >{{selected}}</p>
+    >
+      {{selected}}
+      <b-icon icon="file-arrow-down" font-scale="3"></b-icon>
+      <b-icon icon="list-ol" font-scale="4"></b-icon>
+    </p>
     <div
         class="options"
         v-if="areOptionsVisible || isExpanded"

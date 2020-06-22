@@ -12,7 +12,7 @@
       >
         <div class="content__text">
           <span>{{message.name}}</span>
-          <i class="material-icons">{{message.icon}}</i>
+          <b-icon icon="chat-square-dots-fill" font-scale="2"></b-icon>
         </div>
         <div class="content_buttons">
           <button v-if="rightButton.length">{{rightButton}}</button>
@@ -70,7 +70,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .v-notification {
     position: fixed;
     top: 180px;
@@ -83,21 +83,18 @@
     &__content {
       padding: 16px;
       border-radius: 20px;
-      color: black;
+      color: white;
       display: flex;
       justify-content: space-between;
       align-items: center;
       height: 50px;
       margin-bottom: 16px;
-      background: green;
+      background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
       &.error {
         background: red;
       }
       &.warning {
         background: orange;
-      }
-      &.ok {
-        background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
       }
     }
     .content {
@@ -106,9 +103,6 @@
         align-items: center;
         justify-content: space-between;
       }
-    }
-    .material-icons {
-      margin-left: 16px;
     }
     border-radius: 30px;
   }

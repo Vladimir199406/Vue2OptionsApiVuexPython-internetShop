@@ -5,7 +5,7 @@
 
     <v-popup
         v-if="isInfoPopupVisible" 
-        rightBtnTitle="Add to cart"
+        rightBtnTitle=""
         :popupTitle="product_data.name"
         @closePopup="closeInfoPopup"
         @rightBtnAction="addToCart"
@@ -67,16 +67,30 @@
           <!--ABOVE IS A GLOBAL PRODUCT RATING FORM-->
           </div >
 
+
         <!--BELOW IS A MAIN BLOCK OF INFO-->
-        <p class="v-catalog-item__name">Article: {{product_data.article}}</p>
-        <p class="v-catalog-item__price">Price: {{product_data.price | toFix}} Р.</p>
-        <p class="v-catalog-item__price">Category: {{product_data.category}}</p>
-        <p class="v-catalog-item__price" v-if="product_data.type == 'mobilesAndGadgets'">Screen: {{product_data.screen}}</p>
-        <p class="v-catalog-item__price" v-if="product_data.type == 'mobilesAndGadgets'">Battery: {{product_data.batteryCapacity}}</p>
-        <p class="v-catalog-item__price" v-if="product_data.type == 'mobilesAndGadgets'">Memory: {{product_data.memory}}</p>
-        <p class="v-catalog-item__price" v-if="product_data.type == 'mobilesAndGadgets'">Camera: {{product_data.camera}}</p>
+        <p class="v-catalog-item__name">
+          <b-icon icon="hash" font-scale="1.5"></b-icon> 
+          {{product_data.article}}
+        </p>
+
+        <p class="v-catalog-item__price">
+          <b-icon icon="wallet" font-scale="1.5"></b-icon> 
+          {{product_data.price | toFix}}
+        </p>
+
+        <p class="v-catalog-item__price">
+          <b-icon icon="tag" font-scale="1.5"></b-icon>
+          {{product_data.category}}
+        </p>
+
+        <p class="v-catalog-item__price">
+          <b-icon icon="display-fill" font-scale="1.5"></b-icon> 
+          {{product_data.screen}}
+        </p>
         <!--ABOVE IS A MAIN BLOCK OF INFO-->
         
+
         <!--BELOW IS A PERSONAL RATING FORM-->
         <div>You rate:
           <b-form-rating  v-model="valuePersonal" 
@@ -116,15 +130,21 @@
       @closeAlert="closeAlertPopupInfo"
      >
      </v-alert-popup>
-    <img class="v-catalog-item__image" :src=" require('../../../assets/images/DefaultColorProducts/' + product_data.image[0]) " alt="img" >
-    <p class="v-catalog-item__name">{{product_data.name}}</p>
-    <p class="v-catalog-item__price">Price: {{product_data.price | toFix}}</p>
-    <button
-        class="v-catalog-item__show-info"
-        @click="showPopupInfo"
-    >
-      Show info
-    </button>
+     <label @click="showPopupInfo"
+            class="labelItem"
+     >
+        <div>
+          <img class="v-catalog-item__image" :src=" require('../../../assets/images/DefaultColorProducts/' + product_data.image[0]) " alt="img" >
+          <p class="v-catalog-item__name">{{product_data.name}}</p>
+          <p class="v-catalog-item__price">
+            <b-icon icon="wallet" font-scale="1.5"></b-icon>
+            {{product_data.price | toFix}}
+          </p>
+          <div class="divCartIcon">
+            <b-icon icon="cart" font-scale="2"></b-icon>
+          </div>
+        </div>
+     </label>
     <br>
   </div>
 </template>

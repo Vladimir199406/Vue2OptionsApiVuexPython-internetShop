@@ -6,7 +6,7 @@
     />
       <router-link :to="{name: 'cart', params: {cart_data: CART}}">
         <keep-alive>
-        <div class="v-catalog__link_to_cart">Cart: {{CART.length}}</div>
+          <div class="v-catalog__link_to_cart"> <b-icon icon="cart2" font-scale="2"></b-icon> {{CART.length}}</div>
         </keep-alive>
       </router-link>
     <h1 class="clothesCatalogName">Clothes catalog</h1>
@@ -71,7 +71,7 @@
           {name: 'Women T-shirts', value: 'Women T-shirts'},
           {name: 'Men T-shirts', value: 'Men T-shirts'}
         ],
-        selected: 'Select category of clothes',
+        selected: '',
         sortedProducts: [],
         minPrice: 0,
         maxPrice: 10000,

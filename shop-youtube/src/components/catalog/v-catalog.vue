@@ -1,12 +1,11 @@
 <template>
   <div class='v-catalog'>
-
     <v-notification
         :messages="messages"
     />
       <router-link :to="{name: 'cart', params: {cart_data: CART}}">
         <keep-alive>
-        <div class="v-catalog__link_to_cart">Cart: {{CART.length}}</div>
+        <div class="v-catalog__link_to_cart"> <b-icon icon="cart2" font-scale="2"></b-icon> {{CART.length}}</div>
         </keep-alive>
       </router-link>
     <h1 class="catalogClassName">Catalog</h1>
@@ -16,7 +15,7 @@
           :options="categories"
           @select="sortByCategories"
       />
-      <div class="range-slider">
+      <div class="range-slider" >
         <input
             type="range"
             min="0"
@@ -91,7 +90,7 @@
           {name: 'Watering hose', value: 'Watering hose'},
           {name: 'Shovel', value: 'Shovel'}
         ],
-        selected: 'Select category',
+        selected: '',
         sortedProducts: [],
         minPrice: 0,
         maxPrice: 10000,
@@ -148,7 +147,7 @@
           .then(() => {
             let timeStamp = Date.now().toLocaleString();
             this.messages.unshift(
-              {name: 'PRODUCT WAS ADDED', icon: 'ok', id: timeStamp}
+              {name: 'PRODUCT WAS ADDED', id: timeStamp}
             )
           })
       },
@@ -188,6 +187,7 @@
     margin-bottom: 2%;
   }
   .v-catalog {
+    color: #8f8f8f;
     width: 60%;
     margin-left: 31%;
     &__list {

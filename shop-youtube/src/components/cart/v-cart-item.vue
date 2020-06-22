@@ -9,14 +9,20 @@
       <p>{{cart_item_data.selectedSize}}</p>
     </div>
     <div class="v-cart-item__quantity">
-      <p>Qty:</p>
-      <span class="quantity__tools">
-        <span class="quantity__btn" @click="decrementItem">-</span>
+      <!--<p>Qty:</p>-->
+      <div class="quantity__tools">
+        <span class="quantity__btn" @click="decrementItem">
+          <b-icon icon = "cart-dash" font-scale="1.5" style="color: #1E90FF"></b-icon>
+        </span>
         {{cart_item_data.quantity}}
-        <span class="quantity__btn" @click="incrementItem">+</span>
-      </span>
+        <span class="quantity__btn" @click="incrementItem">
+          <b-icon icon = "cart-plus" font-scale="1.5" style="color: #1E90FF"></b-icon>
+        </span>
+      </div>
     </div>
-    <button @click="deleteFromCart" class="deleteBTN">Delete</button>
+    <button @click="deleteFromCart" class="deleteBTN">
+      <b-icon icon = "trash-fill" font-scale="1.5"></b-icon>
+    </button>
   </div>
 </template>
 
@@ -68,13 +74,11 @@ import toFix from '../../filters/toFix'
     .quantity__btn {
       cursor: pointer;
       font-weight: 700;
-      border-radius: 10px;
     }
     .quantity__tools {
       cursor: pointer;
-      user-select: none;
       font-weight: 700;
-      border-radius: 10px;
+      position: relative;
     }
   }
   .deleteBTN{
@@ -82,5 +86,7 @@ import toFix from '../../filters/toFix'
     background: rgb(247, 9, 49);
     font-weight: 700;
     border-radius: 10px;
+    height: 20%;
+    color: #4d4b4b;
   }
 </style>

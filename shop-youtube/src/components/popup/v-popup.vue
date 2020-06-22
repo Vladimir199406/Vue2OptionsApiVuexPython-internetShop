@@ -8,12 +8,15 @@
         <slot></slot>
       </div>
       <div class="v-popup__footer">
-        <button class="close_modal" @click="closePopup">Close</button>
+        <button class="close_modal" @click="closePopup">
+          <b-icon icon="door-closed-fill" font-scale="1.5"></b-icon>
+        </button>
         <button
             class="submit_btn"
             @click="rightBtnAction"
         >
           {{rightBtnTitle}}
+          <b-icon icon="cart-plus" font-scale="2"></b-icon>
         </button>
       </div>
     </div>

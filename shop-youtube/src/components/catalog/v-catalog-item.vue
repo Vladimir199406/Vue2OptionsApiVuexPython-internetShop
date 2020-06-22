@@ -4,7 +4,7 @@
   <div class='v-catalog-item'>
     <v-popup
         v-if="isInfoPopupVisible" 
-        rightBtnTitle="Add to cart"
+        rightBtnTitle=""
         :popupTitle="product_data.name"
         @closePopup="closeInfoPopup"
         @rightBtnAction="addToCart"
@@ -55,7 +55,7 @@
       <div>
           <!--BELOW IS A GLOBAL PRODUCT RATING FORM-->
           <div class="rateGlobal">
-            Total rate: 
+            <b-icon icon="star-fill" font-scale="1.5"></b-icon>
             <b-form-rating 
               v-model = "valueTotalOfProduct" 
               readonly 
@@ -66,21 +66,63 @@
           <!--ABOVE IS A GLOBAL PRODUCT RATING FORM-->
           </div >
 
+
         <!--BELOW IS A MAIN BLOCK OF INFO-->
-        <p class="v-catalog-item__name">Article: {{product_data.article}}</p>
-        <p class="v-catalog-item__price">Price: {{product_data.price | toFix}} Р.</p>
-        <p class="v-catalog-item__price">Category: {{product_data.category}}</p>
-        <p class="v-catalog-item__price" v-if="product_data.type == 'mobilesAndGadgets' || product_data.type == 'TV'">Screen: {{product_data.screen}}</p>
-        <p class="v-catalog-item__price" v-if="product_data.type == 'mobilesAndGadgets'">Battery: {{product_data.batteryCapacity}}</p>
-        <p class="v-catalog-item__price" v-if="product_data.type == 'mobilesAndGadgets'">Memory: {{product_data.memory}}</p>
-        <p class="v-catalog-item__price" v-if="product_data.type == 'mobilesAndGadgets'">Camera: {{product_data.camera}}</p>
-        <p class="v-catalog-item__price" v-if="product_data.type == 'books'">Author: {{product_data.author}}</p>
-        <p class="v-catalog-item__price" v-if="product_data.type == 'books'">Number of pages: {{product_data.numbersOfPages}}</p>
-        <p class="v-catalog-item__price" v-if="product_data.type == 'books'">Type of cover: {{product_data.coverBinding}}</p>
+        <p class="v-catalog-item__name">
+          <b-icon icon="hash" font-scale="1.5"></b-icon> 
+          {{product_data.article}}
+        </p>
+
+        <p class="v-catalog-item__price">
+          <b-icon icon="wallet" font-scale="1.5"></b-icon> 
+          {{product_data.price | toFix}}
+        </p>
+
+        <p class="v-catalog-item__price">
+          <b-icon icon="tag" font-scale="1.5"></b-icon> 
+          {{product_data.category}}
+        </p>
+
+        <p class="v-catalog-item__price" v-if="product_data.type == 'mobilesAndGadgets' || product_data.type == 'TV'">
+          <b-icon icon="display-fill" font-scale="1.5"></b-icon> 
+          {{product_data.screen}}
+        </p>
+
+        <p class="v-catalog-item__price" v-if="product_data.type == 'mobilesAndGadgets'">
+          <b-icon icon="battery-charging" font-scale="1.5"></b-icon> 
+          {{product_data.batteryCapacity}}
+        </p>
+
+        <p class="v-catalog-item__price" v-if="product_data.type == 'mobilesAndGadgets'">
+          <b-icon icon="inboxes" font-scale="1.5"></b-icon> 
+          {{product_data.memory}}
+        </p>
+
+        <p class="v-catalog-item__price" v-if="product_data.type == 'mobilesAndGadgets'">
+          <b-icon icon="camera" font-scale="1.5"></b-icon> 
+          {{product_data.camera}}
+        </p>
+
+        <p class="v-catalog-item__price" v-if="product_data.type == 'books'">
+          <b-icon icon="person-lines-fill" font-scale="1.5"></b-icon> 
+          {{product_data.author}}
+        </p>
+
+        <p class="v-catalog-item__price" v-if="product_data.type == 'books'">
+          <b-icon icon="book" font-scale="1.5"></b-icon> 
+          {{product_data.numbersOfPages}}
+        </p>
+
+        <p class="v-catalog-item__price" v-if="product_data.type == 'books'">
+          <b-icon icon="book-half" font-scale="1.5"></b-icon> 
+          {{product_data.coverBinding}}
+        </p>
         <!--ABOVE IS A MAIN BLOCK OF INFO-->
         
+
         <!--BELOW IS A PERSONAL RATING FORM-->
-        <div>You rate:
+        <div>
+          <b-icon icon="hand-index-thumb" font-scale="1.5"></b-icon>
           <b-form-rating  v-model="valuePersonal" 
                           variant="warning" 
                           color = "gold" 
@@ -271,15 +313,21 @@
       @closeAlert="closeAlertPopupInfo"
      >
      </v-alert-popup>
-    <img class="v-catalog-item__image" :src=" require('../../assets/images/DefaultColorProducts/' + product_data.image[0]) " alt="img" >
-    <p class="v-catalog-item__name">{{product_data.name}}</p>
-    <p class="v-catalog-item__price">Price: {{product_data.price | toFix}}</p>
-    <button
-        class="v-catalog-item__show-info"
-        @click="showPopupInfo"
-    >
-      Show info
-    </button>
+     <label @click="showPopupInfo"
+            class="labelItem"
+     >
+     <div>
+        <img class="v-catalog-item__image" :src=" require('../../assets/images/DefaultColorProducts/' + product_data.image[0]) " alt="img" >
+        <p class="v-catalog-item__name">{{product_data.name}}</p>
+        <p class="v-catalog-item__price">
+          <b-icon icon="wallet" font-scale="1.5"></b-icon> 
+          {{product_data.price | toFix}}
+        </p>
+        <div class="divCartIcon">
+          <b-icon icon="cart" font-scale="2"></b-icon>
+        </div>
+     </div>
+     </label>
     <br>
   </div>
 </template>
@@ -522,6 +570,7 @@
 
 <style lang="scss">
   .v-catalog-item {
+    color: #8f8f8f;
     font-weight: 700;
     flex-basis: 25%;
     box-shadow: 0 0 8px 0 #e0e0e0;
@@ -540,7 +589,7 @@
     color: white;
     cursor: pointer;
     background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
-    border-radius: 5px;
+    border-radius: 50%;
   }
   .v-catalog-item__add_to_cart_btn{
     color: white;
@@ -586,5 +635,16 @@
   }
   .selectSize{
     margin-top: 8%;
+  }
+  .labelItem{
+    margin: 0;
+    cursor: pointer;
+  }
+  .divCartIcon{
+    color: white;
+    position: center;
+    width: 35%;
+     background-image: linear-gradient(-225deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%);
+    border-radius: 20px;
   }
 </style>
