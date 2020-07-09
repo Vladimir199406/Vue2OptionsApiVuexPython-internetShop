@@ -1367,7 +1367,7 @@
       "colorsStock":["Black", "White", "Grey", "Red", "Blue", "Yellow", "Green"],
       "variantsNumber": ["11","0", "0", "0", "0", "0", "0"],
       "category": "Big Screen TV 8K",
-      "screen": "70-inch 8K HDR 10"
+      "Screen": "70-inch 8K HDR 10"
     },
     {
       "image": ["32.FrontSide.jpg", "32.BackSide.jpg", "32.LeftSide.jpg", "32.RightSide.jpg"],
